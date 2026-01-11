@@ -9,8 +9,6 @@ venv/
 env/
 .env
 
-# Results
-results/
 
 # IDE
 .vscode/
