@@ -1,6 +1,6 @@
-# Vision LLM Benchmark
+# VLM Benchmark for room interior inspection
 
-A comprehensive benchmarking system for evaluating vision language models on kitchen analysis tasks using OpenRouter.
+A comprehensive benchmarking system for evaluating vision language models on room interior analysis tasks using OpenRouter.
 
 ## Overview
 
