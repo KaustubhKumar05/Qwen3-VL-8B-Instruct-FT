@@ -101,7 +101,6 @@ class OpenRouterClient:
                 max_tokens=4000,
                 temperature=0.0,  # Deterministic output for benchmarking
             )
-            
             # Extract response content
             content = response.choices[0].message.content
             

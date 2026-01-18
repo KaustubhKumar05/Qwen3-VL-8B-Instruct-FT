@@ -43,6 +43,7 @@ This project benchmarks multiple vision LLMs by comparing their JSON outputs aga
 
 - Python 3.11 or higher
 - [UV](https://github.com/astral-sh/uv) package manager
+For windows: https://www.python.org/downloads/release/python-3119/
 
 ### Installation
 
@@ -51,27 +52,26 @@ This project benchmarks multiple vision LLMs by comparing their JSON outputs aga
    ```bash
    curl -LsSf https://astral.sh/uv/install.sh | sh
    ```
+For windows: powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
-2. **Clone/navigate to the project directory**:
-
-   ```bash
-   cd /path/to/snipe007-ai-test
-   ```
-
-3. **Install dependencies**:
+2. **Install dependencies after navigating to the project **:
 
    ```bash
    uv sync
+   
+   // Windows only:
+   Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+   .venv\Scripts\Activate.ps1 
    ```
 
-4. **Get your OpenRouter API key**:
+3. **Get your OpenRouter API key**:
 
    - Visit [https://openrouter.ai/keys](https://openrouter.ai/keys)
    - Sign up or log in (GitHub OAuth supported)
    - Click "Create Key" and copy your API key
    - Add credits to your account (pay-per-use pricing)
 
-5. **Configure environment variables**:
+4. **Configure environment variables**:
 
    ```bash
    cp .env.example .env
@@ -88,17 +88,18 @@ This project benchmarks multiple vision LLMs by comparing their JSON outputs aga
 Edit `config.yaml` to customize the benchmark:
 
 ```yaml
-# Models to test (from OpenRouter)
+# Models to test (copy names from OpenRouter - openrouter.ai/models)
 models_to_test:
-  - openai/gpt-4o
-  - anthropic/claude-3.5-sonnet
-  - google/gemini-pro-vision
+  - qwen/qwen3-vl-30b-a3b-instruct
+  - qwen/qwen3-vl-8b-instruct
+  - openai/gpt-4.1-mini
+  - openai/gpt-5.2
 
 # OpenRouter settings
 openrouter:
   base_url: https://openrouter.ai/api/v1
   timeout: 60
-  max_concurrent_requests: 10 # Parallel requests per model (increase for speed)
+  max_concurrent_requests: 5 # Parallel requests per model (increase for speed)
 
 # Scoring weights for components
 scoring_weights:
