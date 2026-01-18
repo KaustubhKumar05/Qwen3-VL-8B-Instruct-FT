@@ -3,10 +3,8 @@
 # List of models to test from OpenRouter
 models_to_test:
   - qwen/qwen3-vl-30b-a3b-instruct
-  - mistralai/ministral-14b-2512
-  - allenai/molmo-2-8b:free
   - qwen/qwen3-vl-8b-instruct
-  - mistralai/ministral-3b-2512
+  - openai/gpt-4.1-mini
   - openai/gpt-5.2
   
 
