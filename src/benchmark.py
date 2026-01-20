@@ -75,10 +75,10 @@ class VisionLLMBenchmark:
         Returns:
             Tuple of (system_prompt, user_prompt)
         """
-        prompt_file = Path(f"prompts/{config.prompt_file_name}.txt")
+        prompt_file = Path(f"prompts/{self.config.get('prompt_file_name', 'base')}.txt")
         if not prompt_file.exists():
             raise FileNotFoundError(
-                f"{config.prompt_file_name}.txt not found in prompts directory"
+                f"{self.config.get('prompt_file_name', 'base')}.txt not found in prompts directory"
             )
 
         with open(prompt_file, "r", encoding="utf-8") as f:

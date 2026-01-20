@@ -61,8 +61,12 @@ For windows: powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/ins
    
    // Windows only:
    Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-   .venv\Scripts\Activate.ps1 
+   .venv\Scripts\Activate.ps1
+  
+    // Others
+   source .venv/bin/activate 
    ```
+  
 
 3. **Get your OpenRouter API key**:
 
