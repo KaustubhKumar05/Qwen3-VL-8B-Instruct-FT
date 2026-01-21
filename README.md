@@ -23,7 +23,7 @@ This project benchmarks multiple vision LLMs by comparing their JSON outputs aga
 ├── pyproject.toml           # UV project dependencies
 ├── .env                     # API key
 ├── src/
-│   ├── benchmark.py         # Main benchmark orchestrator
+│   ├── main.py              # Main orchestrator (benchmark & ground truth generation)
 │   ├── openrouter_client.py # OpenRouter API client
 │   ├── judge.py             # JSON comparison/scoring logic
 │   └── reporter.py          # Report generation
@@ -130,7 +130,7 @@ Browse available models at [https://openrouter.ai/models](https://openrouter.ai/
 ### Run the Benchmark
 
 ```bash
-uv run python -m src.benchmark
+uv run python -m src.main
 ```
 
 The benchmark will:
@@ -211,14 +211,63 @@ The benchmark tracks two key cost metrics:
 - **Total Cost**: Total spent on all samples for that model
 - **Avg Cost/Request**: Average cost per API request (total cost ÷ number of samples)
 
+## Generating Ground Truth
+
+The system can automatically generate ground truth JSON files using a high-quality benchmark model.
+
+### Configuration
+
+Edit `config.yaml` to specify the benchmark model and generation behavior:
+
+```yaml
+# Model to use for generating ground truth
+benchmark_model: openai/gpt-5.2
+
+# Ground truth regeneration behavior
+ground_truth:
+  replace_all: false  # If true, regenerate all existing json files
+                      # If false, only generate for samples without json output
+```
+
+### Generate Ground Truth Files
+
+```bash
+# Generate ground truth for new samples (skip existing ones)
+uv run python -m src.main --generate-ground-truth
+
+# To replace ALL existing ground truth files:
+# 1. Set replace_all: true in config.yaml
+# 2. Run: uv run python -m src.main --generate-ground-truth
+```
+
+The tool will:
+- Find all images in the `Samples/` directory
+- Generate JSON responses using the benchmark model
+- Save them as ground truth files (e.g., `Kitchen_01.json`)
+- Skip existing files if `replace_all: false`
+- Show progress with ✅ (success), ⏭️ (skipped), or ❌ (error) indicators
+
+### When to Use This
+
+- **Adding new samples**: Place new images in `Samples/`, then run with `replace_all: false`
+- **Upgrading ground truth**: Use a better model by changing `benchmark_model` and setting `replace_all: true`
+- **Fixing specific samples**: Delete the JSON files you want to regenerate, then run with `replace_all: false`
+
 ## Adding New Samples
 
-To add new test samples:
+### Manual Method
 
 1. Place the image in `Samples/` (e.g., `Kitchen_11.jpg`)
 2. Create the ground truth JSON (e.g., `Kitchen_11.json`) following the schema
 3. Ensure the filename prefix matches (e.g., `Kitchen_11`)
 4. Run the benchmark - new samples are automatically discovered
+
+### Automated Method (Recommended)
+
+1. Place the image in `Samples/` (e.g., `Kitchen_11.jpg`)
+2. Run ground truth generation: `uv run python -m src.main --generate-ground-truth`
+3. The system will automatically create `Kitchen_11.json`
+4. Review the generated ground truth file for accuracy
 
 ## Troubleshooting
 
@@ -258,7 +307,10 @@ Pricing varies by model. Check current rates at [https://openrouter.ai/models](h
 source .venv/bin/activate
 
 # Run benchmark
-python -m src.benchmark
+python -m src.main
+
+# Generate ground truth
+python -m src.main --generate-ground-truth
 ```
 
 Check the OpenRouter documentation: [https://openrouter.ai/docs](https://openrouter.ai/docs)

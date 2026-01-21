@@ -75,7 +75,7 @@ def main():
 
     # Check dependencies
     try:
-        from src.benchmark import VisionLLMBenchmark
+        from src.main import VisionLLMOrchestrator
         from src.judge import KitchenAnalysisJudge
         from src.openrouter_client import OpenRouterClient
         from src.reporter import BenchmarkReporter
@@ -137,7 +137,10 @@ def main():
         print("✅ Setup verification passed!")
         print()
         print("Ready to run benchmark:")
-        print("  uv run python -m src.benchmark")
+        print("  uv run python -m src.main")
+        print()
+        print("Or generate ground truth:")
+        print("  uv run python -m src.main --generate-ground-truth")
         print()
         return 0
     else:
