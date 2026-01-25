@@ -1,0 +1,100 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#2F8F7F",
+                "coverage": 85
+            },
+            {
+                "hex": "#111111",
+                "coverage": 15
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "gola",
+            "finish": "matte_black",
+            "hex": "#1A1A1A"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Glass",
+        "colors": [
+            {
+                "hex": "#1B1B1B",
+                "coverage": 60
+            },
+            {
+                "hex": "#F2F2F2",
+                "coverage": 40
+            }
+        ],
+        "handle": {
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "tall": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "loft": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#F4F4F4",
+                "coverage": 90
+            },
+            {
+                "hex": "#1B1B1B",
+                "coverage": 10
+            }
+        ],
+        "handle": {
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#C9B9A8",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Stone",
+        "colors": [
+            {
+                "hex": "#B9A690",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "pendant",
+        "count": 3,
+        "layout": "linear",
+        "colorTemperature": "warm_white"
+    }
+}

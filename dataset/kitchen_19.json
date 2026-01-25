@@ -1,0 +1,91 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#7B0D1B",
+                "coverage": 90
+            },
+            {
+                "hex": "#520812",
+                "coverage": 10
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#C0C0C0"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#7B0D1B",
+                "coverage": 92
+            },
+            {
+                "hex": "#520812",
+                "coverage": 8
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#C0C0C0"
+        }
+    },
+    "tall": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "loft": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Glass",
+        "colors": [
+            {
+                "hex": "#CBD5CB",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#F2F0EA",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "recessed_downlights",
+        "count": 4,
+        "layout": "linear",
+        "colorTemperature": "warm_white"
+    }
+}

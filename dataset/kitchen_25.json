@@ -1,0 +1,96 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#C39A79",
+                "coverage": 90
+            },
+            {
+                "hex": "#1F1F1F",
+                "coverage": 10
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "gola",
+            "finish": "black",
+            "hex": "#1F1F1F"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#C39A79",
+                "coverage": 100
+            }
+        ],
+        "handle": {
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "tall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#C39A79",
+                "coverage": 70
+            },
+            {
+                "hex": "#1A1A1A",
+                "coverage": 30
+            }
+        ],
+        "handle": {
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "loft": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#E6E1DA",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#CFCFC8",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "track_lights",
+        "count": 3,
+        "layout": "linear",
+        "colorTemperature": "warm_white"
+    }
+}

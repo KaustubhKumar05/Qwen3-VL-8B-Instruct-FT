@@ -1,0 +1,104 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#8A7F78",
+                "coverage": 70
+            },
+            {
+                "hex": "#A79C95",
+                "coverage": 30
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#B9BDC1"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#C3A27E",
+                "coverage": 75
+            },
+            {
+                "hex": "#B18C66",
+                "coverage": 25
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#B9BDC1"
+        }
+    },
+    "tall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#C3A27E",
+                "coverage": 80
+            },
+            {
+                "hex": "#B18C66",
+                "coverage": 20
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#B9BDC1"
+        }
+    },
+    "loft": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#C3A27E",
+                "coverage": 80
+            },
+            {
+                "hex": "#B18C66",
+                "coverage": 20
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#B9BDC1"
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Unknown",
+        "colors": [
+            {
+                "hex": "#D6D0C8",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": []
+    },
+    "ceilingLighting": {
+        "detected": false,
+        "type": "unknown",
+        "count": null,
+        "layout": "unknown",
+        "colorTemperature": "unknown"
+    }
+}

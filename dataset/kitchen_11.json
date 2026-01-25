@@ -1,0 +1,95 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#2F3338",
+                "coverage": 85
+            },
+            {
+                "hex": "#4A4F55",
+                "coverage": 15
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#B0B0B0"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#D9DDE1",
+                "coverage": 80
+            },
+            {
+                "hex": "#BFC5CB",
+                "coverage": 20
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#B0B0B0"
+        }
+    },
+    "tall": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "loft": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#D9DDE1",
+                "coverage": 80
+            },
+            {
+                "hex": "#BFC5CB",
+                "coverage": 20
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#B0B0B0"
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Stone",
+        "colors": [
+            {
+                "hex": "#2B2B2C",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": []
+    },
+    "ceilingLighting": {
+        "detected": false,
+        "type": "unknown",
+        "count": null,
+        "layout": "unknown",
+        "colorTemperature": "unknown"
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#A75A45",
+                "coverage": 90
+            },
+            {
+                "hex": "#2B2B2B",
+                "coverage": 10
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "knob",
+            "finish": "matte_black",
+            "hex": "#1F1F1F"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#B6ADA3",
+                "coverage": 85
+            },
+            {
+                "hex": "#1C1C1C",
+                "coverage": 15
+            }
+        ],
+        "handle": {
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "tall": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "loft": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#B6ADA3",
+                "coverage": 95
+            },
+            {
+                "hex": "#8F8882",
+                "coverage": 5
+            }
+        ],
+        "handle": {
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Unknown",
+        "colors": [
+            {
+                "hex": "#E9E6E1",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Unknown",
+        "colors": [
+            {
+                "hex": "#E7E7E5",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "recessed_downlights",
+        "count": 1,
+        "layout": "single",
+        "colorTemperature": "neutral_white"
+    }
+}

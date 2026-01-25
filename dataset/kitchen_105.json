@@ -1,0 +1,100 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#4A3A34",
+                "coverage": 75
+            },
+            {
+                "hex": "#2E2522",
+                "coverage": 25
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#C7CCD1"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Glass",
+        "colors": [
+            {
+                "hex": "#B9BEC4",
+                "coverage": 65
+            },
+            {
+                "hex": "#E6E8EB",
+                "coverage": 35
+            }
+        ],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "tall": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "loft": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#F4F5F6",
+                "coverage": 92
+            },
+            {
+                "hex": "#D6D9DE",
+                "coverage": 8
+            }
+        ],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#D2B9AA",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#E9E9EA",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "panel",
+        "count": 1,
+        "layout": "single",
+        "colorTemperature": "neutral_white"
+    }
+}

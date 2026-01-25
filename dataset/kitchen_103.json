@@ -1,0 +1,92 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#E6E2D9",
+                "coverage": 90
+            },
+            {
+                "hex": "#CFCAC0",
+                "coverage": 10
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#BFC3C7"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#E2A31A",
+                "coverage": 100
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#BFC3C7"
+        }
+    },
+    "tall": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "loft": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#E2A31A",
+                "coverage": 100
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#BFC3C7"
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#F2F2F2",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#D8D8D8",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "recessed_downlights",
+        "count": 1,
+        "layout": "perimeter",
+        "colorTemperature": "neutral_white"
+    }
+}

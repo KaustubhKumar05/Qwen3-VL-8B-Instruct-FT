@@ -1,0 +1,117 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#D9D2C7",
+                "coverage": 85
+            },
+            {
+                "hex": "#4B3528",
+                "coverage": 10
+            },
+            {
+                "hex": "#2C241F",
+                "coverage": 5
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#C2C4C6"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#D9D2C7",
+                "coverage": 82
+            },
+            {
+                "hex": "#4B3528",
+                "coverage": 18
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#C2C4C6"
+        }
+    },
+    "tall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#D9D2C7",
+                "coverage": 70
+            },
+            {
+                "hex": "#1F1F20",
+                "coverage": 20
+            },
+            {
+                "hex": "#4B3528",
+                "coverage": 10
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#C2C4C6"
+        }
+    },
+    "loft": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#D9D2C7",
+                "coverage": 85
+            },
+            {
+                "hex": "#4B3528",
+                "coverage": 15
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#C2C4C6"
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#E7E0D6",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#BEB7AD",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "recessed_downlights",
+        "count": 4,
+        "layout": "perimeter",
+        "colorTemperature": "warm_white"
+    }
+}

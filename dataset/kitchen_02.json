@@ -1,0 +1,100 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#7A4A26",
+                "coverage": 95
+            },
+            {
+                "hex": "#4A2B16",
+                "coverage": 5
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#B8BCC0"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#5E6F1F",
+                "coverage": 90
+            },
+            {
+                "hex": "#8B5A2B",
+                "coverage": 10
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "knob",
+            "finish": "unknown",
+            "hex": "#8B5A2B"
+        }
+    },
+    "tall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#5E6F1F",
+                "coverage": 90
+            },
+            {
+                "hex": "#8B5A2B",
+                "coverage": 10
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "knob",
+            "finish": "unknown",
+            "hex": "#8B5A2B"
+        }
+    },
+    "loft": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Paint",
+        "colors": [
+            {
+                "hex": "#C9773A",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#E8D9C4",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "panel",
+        "count": 2,
+        "layout": "linear",
+        "colorTemperature": "neutral_white"
+    }
+}

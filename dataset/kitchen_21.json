@@ -1,0 +1,95 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "PU",
+        "colors": [
+            {
+                "hex": "#5E748B",
+                "coverage": 88
+            },
+            {
+                "hex": "#1A1A1A",
+                "coverage": 8
+            },
+            {
+                "hex": "#EDEDED",
+                "coverage": 4
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "gola",
+            "finish": "black",
+            "hex": "#1A1A1A"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#C8A36F",
+                "coverage": 72
+            },
+            {
+                "hex": "#3A241B",
+                "coverage": 28
+            }
+        ],
+        "handle": {
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "tall": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "loft": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Unknown",
+        "colors": [
+            {
+                "hex": "#D3C7B5",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Unknown",
+        "colors": [
+            {
+                "hex": "#CFCFCF",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "pendant",
+        "count": 1,
+        "layout": "single",
+        "colorTemperature": "warm_white"
+    }
+}

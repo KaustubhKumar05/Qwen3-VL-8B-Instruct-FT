@@ -1,0 +1,100 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#2B0B14",
+                "coverage": 70
+            },
+            {
+                "hex": "#E6E6E3",
+                "coverage": 30
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#C0C0C0"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#2B0B14",
+                "coverage": 55
+            },
+            {
+                "hex": "#E6E6E3",
+                "coverage": 45
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#C0C0C0"
+        }
+    },
+    "tall": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#1A1A1C",
+                "coverage": 70
+            },
+            {
+                "hex": "#2B0B14",
+                "coverage": 30
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#C0C0C0"
+        }
+    },
+    "loft": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#8B8B8C",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#D6D6D5",
+                "coverage": 100
+            }
+        ]
+    },
+    "ceilingLighting": {
+        "detected": false,
+        "type": "unknown",
+        "count": null,
+        "layout": "unknown",
+        "colorTemperature": "unknown"
+    }
+}

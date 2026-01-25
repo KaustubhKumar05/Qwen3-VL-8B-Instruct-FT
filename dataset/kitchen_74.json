@@ -1,0 +1,95 @@
+{
+    "base": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#DAD5D1",
+                "coverage": 55
+            },
+            {
+                "hex": "#8E9E4A",
+                "coverage": 40
+            },
+            {
+                "hex": "#1E1B18",
+                "coverage": 5
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#C7CCD1"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#8F9F4A",
+                "coverage": 70
+            },
+            {
+                "hex": "#D9D4CF",
+                "coverage": 30
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#C7CCD1"
+        }
+    },
+    "tall": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
+        "handle": {
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
+        }
+    },
+    "loft": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#8F9F4A",
+                "coverage": 100
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#C7CCD1"
+        }
+    },
+    "dado": {
+        "detected": true,
+        "finishFamily": "Tile",
+        "colors": [
+            {
+                "hex": "#7B7670",
+                "coverage": 100
+            }
+        ]
+    },
+    "floor": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": []
+    },
+    "ceilingLighting": {
+        "detected": true,
+        "type": "recessed_downlights",
+        "count": 3,
+        "layout": "linear",
+        "colorTemperature": "neutral_white"
+    }
+}

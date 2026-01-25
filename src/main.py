@@ -366,6 +366,53 @@ def check_contamination(samples_dir: Path, dataset_dir: Path, hash_size: int = 1
     print("=" * 60)
 
 
+def check_duplicates(target_dir: Path, hash_size: int = 16) -> None:
+    """
+    Check for duplicate images within a single directory.
+
+    Uses perceptual hashing (pHash) to detect identical or near-identical images.
+
+    Args:
+        target_dir: Path to the directory to check
+        hash_size: Size of the perceptual hash (higher = more precise, default 16)
+    """
+    if not target_dir.exists():
+        print(f"Directory not found: {target_dir}")
+        return
+
+    image_extensions = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff", ".gif", ".heic", ".avif"}
+
+    print(f"Scanning {target_dir} for internal duplicates...")
+    hash_to_files: Dict[str, List[Path]] = {}
+
+    image_files = [f for f in target_dir.iterdir() if f.suffix.lower() in image_extensions]
+    for image_file in image_files:
+        try:
+            img = Image.open(image_file)
+            phash = str(imagehash.phash(img, hash_size=hash_size))
+            if phash not in hash_to_files:
+                hash_to_files[phash] = []
+            hash_to_files[phash].append(image_file)
+        except Exception as e:
+            print(f"⚠️  Could not hash {image_file.name}: {e}")
+
+    print(f"Hashed {len(image_files)} images")
+
+    duplicates = {h: files for h, files in hash_to_files.items() if len(files) > 1}
+
+    print("\n" + "=" * 60)
+    if duplicates:
+        total_dupes = sum(len(files) - 1 for files in duplicates.values())
+        print(f"Found {total_dupes} duplicate(s) in {len(duplicates)} group(s):")
+        for phash, files in duplicates.items():
+            print(f"\n  Group (hash: {phash[:8]}...):")
+            for f in files:
+                print(f"    {f}")
+    else:
+        print("✅ No duplicates found!")
+    print("=" * 60)
+
+
 # ============================================================================
 # GROUND TRUTH GENERATION FUNCTIONS
 # ============================================================================
@@ -813,6 +860,11 @@ def main():
         help="Check if dataset images are duplicates of benchmark samples",
     )
     parser.add_argument(
+        "--check-duplicates",
+        action="store_true",
+        help="Check for duplicate images within the dataset directory",
+    )
+    parser.add_argument(
         "--active-dir",
         type=str,
         help="Override active_dir from config",
@@ -836,13 +888,23 @@ def main():
 
         if args.prepare_samples:
             samples_dir = Path(config.get("active_dir", "Samples"))
+            dataset_dir = Path(config.get("dataset_dir", "dataset"))
             prepare_samples(samples_dir)
+            print()
+            check_duplicates(samples_dir)
+            print()
+            check_contamination(Path("Samples"), dataset_dir)
             return
 
         if args.check_contamination:
             samples_dir = Path(config.get("active_dir", "Samples"))
             dataset_dir = Path(config.get("dataset_dir", "dataset"))
             check_contamination(samples_dir, dataset_dir)
+            return
+
+        if args.check_duplicates:
+            dataset_dir = Path(config.get("dataset_dir", "dataset"))
+            check_duplicates(dataset_dir)
             return
 
         orchestrator = VisionLLMOrchestrator(config)

@@ -251,6 +251,16 @@ python -m src.main --check-contamination --active-dir Samples --dataset-dir data
 ```
 Uses perceptual hashing (pHash) to detect if any images in your training dataset are duplicates of benchmark samples. Catches exact matches and near-duplicates (resized, re-encoded, etc.).
 
+### Check for Internal Duplicates
+
+```bash
+python -m src.main --check-duplicates
+
+# Override directory from config:
+python -m src.main --check-duplicates --dataset-dir path/to/images
+```
+Scans the dataset directory for duplicate images within itself. Groups duplicates together for easy review.
+
 ### Generate Ground Truth Files
 
 ```bash

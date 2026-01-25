@@ -11,12 +11,12 @@ benchmark_model: openai/gpt-5.2
 
 # Ground truth regeneration behavior
 ground_truth:
-  replace_all: true  # If true, replace all existing. If false, only create for missing ones
+  replace_all: false  # If true, replace all existing. If false, only create for missing ones
 
 prompt_file_name: base
 
 # Directory containing benchmark sample images (used for prep, ground truth, and benchmarking)
-active_dir: Samples
+active_dir: dataset
 
 # Directory containing dataset images (for contamination check)
 dataset_dir: dataset
