@@ -1,0 +1,290 @@
+{
+  "sample": "kitchen_39",
+  "model": "openai/gpt-5.2",
+  "response": {
+    "base": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#2B9E91",
+          "coverage": 95
+        },
+        {
+          "hex": "#2B2F33",
+          "coverage": 5
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "knob",
+        "finish": "gold",
+        "hex": "#B08D3A"
+      }
+    },
+    "wall": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#2B9E91",
+          "coverage": 60
+        },
+        {
+          "hex": "#A77B54",
+          "coverage": 40
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "knob",
+        "finish": "gold",
+        "hex": "#B08D3A"
+      }
+    },
+    "tall": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#2B9E91",
+          "coverage": 90
+        },
+        {
+          "hex": "#2B2F33",
+          "coverage": 10
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "knob",
+        "finish": "gold",
+        "hex": "#B08D3A"
+      }
+    },
+    "loft": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#2B9E91",
+          "coverage": 60
+        },
+        {
+          "hex": "#A77B54",
+          "coverage": 40
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "knob",
+        "finish": "gold",
+        "hex": "#B08D3A"
+      }
+    },
+    "dado": {
+      "detected": true,
+      "finishFamily": "Stone",
+      "colors": [
+        {
+          "hex": "#C2C6CB",
+          "coverage": 100
+        }
+      ]
+    },
+    "floor": {
+      "detected": true,
+      "finishFamily": "Tile",
+      "colors": [
+        {
+          "hex": "#CFCFD0",
+          "coverage": 100
+        }
+      ]
+    },
+    "ceilingLighting": {
+      "detected": true,
+      "type": "recessed_downlights",
+      "count": 3,
+      "layout": "linear",
+      "colorTemperature": "neutral_white"
+    }
+  },
+  "ground_truth": {
+    "base": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#2F8E84",
+          "coverage": 88
+        },
+        {
+          "hex": "#1F2326",
+          "coverage": 12
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "knob",
+        "finish": "gold",
+        "hex": "#C6A23A"
+      }
+    },
+    "wall": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#2F8E84",
+          "coverage": 65
+        },
+        {
+          "hex": "#A67B4F",
+          "coverage": 35
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "knob",
+        "finish": "gold",
+        "hex": "#C6A23A"
+      }
+    },
+    "tall": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#2F8E84",
+          "coverage": 55
+        },
+        {
+          "hex": "#0E0F11",
+          "coverage": 45
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "knob",
+        "finish": "gold",
+        "hex": "#C6A23A"
+      }
+    },
+    "loft": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#2F8E84",
+          "coverage": 70
+        },
+        {
+          "hex": "#A67B4F",
+          "coverage": 30
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "knob",
+        "finish": "gold",
+        "hex": "#C6A23A"
+      }
+    },
+    "dado": {
+      "detected": true,
+      "finishFamily": "Stone",
+      "colors": [
+        {
+          "hex": "#B8BCC2",
+          "coverage": 100
+        }
+      ]
+    },
+    "floor": {
+      "detected": true,
+      "finishFamily": "Tile",
+      "colors": [
+        {
+          "hex": "#BFC3C7",
+          "coverage": 100
+        }
+      ]
+    },
+    "ceilingLighting": {
+      "detected": true,
+      "type": "recessed_downlights",
+      "count": 3,
+      "layout": "linear",
+      "colorTemperature": "neutral_white"
+    }
+  },
+  "score": 0.6715733580294592,
+  "detailed_scores": {
+    "overall_score": 0.6715733580294592,
+    "component_scores": {
+      "base": {
+        "detected": 1.0,
+        "finishFamily": 1.0,
+        "colors": 0.9079929981634937,
+        "handle": 0.949005127586621,
+        "total": 0.9621989249663724
+      },
+      "wall": {
+        "detected": 1.0,
+        "finishFamily": 1.0,
+        "colors": 0.9339850409181056,
+        "handle": 0.949005127586621,
+        "total": 0.9699965377927559
+      },
+      "tall": {
+        "detected": 1.0,
+        "finishFamily": 1.0,
+        "colors": 0.7692742786861092,
+        "handle": 0.949005127586621,
+        "total": 0.920583309123157
+      },
+      "loft": {
+        "detected": 1.0,
+        "finishFamily": 1.0,
+        "colors": 0.91581509485069,
+        "handle": 0.949005127586621,
+        "total": 0.9645455539725313
+      },
+      "dado": {
+        "detected": 1.0,
+        "finishFamily": 1.0,
+        "colors": 0.9758955363344066,
+        "handle": 1.0,
+        "total": 0.9927686609003219
+      },
+      "floor": {
+        "detected": 1.0,
+        "finishFamily": 1.0,
+        "colors": 0.955751740414704,
+        "handle": 1.0,
+        "total": 0.9867255221244111
+      },
+      "ceilingLighting": {
+        "detected": 1.0,
+        "type": 1.0,
+        "count": 1.0,
+        "layout": 1.0,
+        "colorTemperature": 1.0,
+        "total": 1.0
+      },
+      "baseUnitCoverage": {
+        "total": 1.0
+      },
+      "wallUnitCoverage": {
+        "total": 1.0
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1736,
+    "completion_tokens": 1374,
+    "total_tokens": 3110
+  },
+  "cost": 0.0206612
+}

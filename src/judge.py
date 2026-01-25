@@ -3,6 +3,12 @@
 from typing import Dict, Any, List, Tuple
 import math
 
+FINISH_SIMILARITY = {
+    frozenset({"Laminate", "PU"}): 0.6,
+    frozenset({"PU", "Acrylic"}): 0.7,
+    frozenset({"Laminate", "Acrylic"}): 0.4,
+}
+
 
 class KitchenAnalysisJudge:
     """Judge for comparing kitchen analysis JSON outputs."""
@@ -15,15 +21,53 @@ class KitchenAnalysisJudge:
             weights: Dictionary of component weights for scoring
         """
         self.weights = weights or {
-            "base": 0.15,
-            "wall": 0.15,
-            "tall": 0.15,
-            "loft": 0.15,
-            "dado": 0.05,
-            "floor": 0.05,
-            "colors": 0.20,
+            "base": 0.14,
+            "wall": 0.14,
+            "tall": 0.14,
+            "loft": 0.14,
+            "dado": 0.04,
+            "floor": 0.04,
+            "colors": 0.16,
             "handles": 0.10,
+            "baseUnitCoverage": 0.05,
+            "wallUnitCoverage": 0.05,
         }
+    
+    def score_finish_similarity(self, expected: str, actual: str) -> float:
+        """
+        Score finish family similarity with partial credit for commonly confused types.
+        
+        Args:
+            expected: Expected finish family
+            actual: Actual finish family
+            
+        Returns:
+            Score from 0.0 to 1.0
+        """
+        if expected == actual:
+            return 1.0
+        return FINISH_SIMILARITY.get(frozenset({expected, actual}), 0.0)
+    
+    def score_coverage(self, expected: int, actual: int, tolerance: int = 10) -> float:
+        """
+        Score unit coverage percentage with tolerance.
+        
+        Args:
+            expected: Expected coverage percentage (0-100)
+            actual: Actual coverage percentage (0-100)
+            tolerance: Allowed difference for full score
+            
+        Returns:
+            Score from 0.0 to 1.0
+        """
+        if expected is None and actual is None:
+            return 1.0
+        if expected is None or actual is None:
+            return 0.0
+        diff = abs(expected - actual)
+        if diff <= tolerance:
+            return 1.0
+        return max(0.0, 1.0 - (diff - tolerance) / (100 - tolerance))
     
     def hex_to_lab(self, hex_color: str) -> Tuple[float, float, float]:
         """
@@ -246,10 +290,10 @@ class KitchenAnalysisJudge:
         act_detected = actual.get("detected", False)
         scores["detected"] = 1.0 if exp_detected == act_detected else 0.0
         
-        # FinishFamily score
+        # FinishFamily score (with partial credit for similar finishes)
         exp_finish = expected.get("finishFamily", "Unknown")
         act_finish = actual.get("finishFamily", "Unknown")
-        scores["finishFamily"] = 1.0 if exp_finish == act_finish else 0.0
+        scores["finishFamily"] = self.score_finish_similarity(exp_finish, act_finish)
         
         # Colors score
         exp_colors = expected.get("colors", [])
@@ -351,6 +395,17 @@ class KitchenAnalysisJudge:
         exp_lighting = expected.get("ceilingLighting", {})
         act_lighting = actual.get("ceilingLighting", {})
         component_scores["ceilingLighting"] = self.score_ceiling_lighting(exp_lighting, act_lighting)
+        
+        # Score unit coverage percentages
+        exp_base_coverage = expected.get("baseUnitCoverage")
+        act_base_coverage = actual.get("baseUnitCoverage")
+        base_coverage_score = self.score_coverage(exp_base_coverage, act_base_coverage)
+        component_scores["baseUnitCoverage"] = {"total": base_coverage_score}
+        
+        exp_wall_coverage = expected.get("wallUnitCoverage")
+        act_wall_coverage = actual.get("wallUnitCoverage")
+        wall_coverage_score = self.score_coverage(exp_wall_coverage, act_wall_coverage)
+        component_scores["wallUnitCoverage"] = {"total": wall_coverage_score}
         
         # Calculate overall score using weights
         overall_score = 0.0
