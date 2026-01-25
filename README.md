@@ -4,7 +4,7 @@ A comprehensive benchmarking system for evaluating vision language models on roo
 
 ## Overview
 
-This project benchmarks multiple vision LLMs by comparing their JSON outputs against ground truth samples. It uses structural JSON comparison with perceptual color similarity scoring to evaluate model performance, tracks token usage and costs, and generates detailed markdown reports.
+This project benchmarks multiple vision LLMs by comparing their JSON outputs against ground truth samples. It uses structural JSON comparison with perceptual color similarity scoring to evaluate model performance, tracks token usage and costs, and detailed markdown reports.
 
 ## Features
 
@@ -232,11 +232,24 @@ ground_truth:
 
 ```bash
 python -m src.main --prepare-samples
+
+# Override the directory from config:
+python -m src.main --prepare-samples --active-dir path/to/images
 ```
-Loops over all images in Samples/ (supports jpg, png, webp, bmp, tiff, gif, heic)
+Loops over all images in the active directory (supports jpg, png, webp, bmp, tiff, gif, heic)
 Renames them to kitchen_01.jpg, kitchen_02.jpg, etc.
 Uses ffmpeg for jpg conversion
 Deletes the original file after successful conversion
+
+### Check for Dataset Contamination
+
+```bash
+python -m src.main --check-contamination
+
+# Override directories from config:
+python -m src.main --check-contamination --active-dir Samples --dataset-dir dataset
+```
+Uses perceptual hashing (pHash) to detect if any images in your training dataset are duplicates of benchmark samples. Catches exact matches and near-duplicates (resized, re-encoded, etc.).
 
 ### Generate Ground Truth Files
 

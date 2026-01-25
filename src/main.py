@@ -10,8 +10,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
+import imagehash
 import yaml
 from dotenv import load_dotenv
+from PIL import Image
 
 from src.judge import KitchenAnalysisJudge
 from src.openrouter_client import OpenRouterClient
@@ -231,7 +233,7 @@ def score_and_save_result(
 # ============================================================================
 
 
-def prepare_samples(samples_dir: Path = Path("Samples")) -> None:
+def prepare_samples(samples_dir: Path) -> None:
     """
     Rename and convert all images in the Samples directory to kitchen_<num>.jpg format.
 
@@ -304,6 +306,66 @@ def prepare_samples(samples_dir: Path = Path("Samples")) -> None:
     print("\nImage preparation complete!")
 
 
+def check_contamination(samples_dir: Path, dataset_dir: Path, hash_size: int = 16) -> None:
+    """
+    Check if any images in the dataset are duplicates of benchmark samples.
+
+    Uses perceptual hashing (pHash) to detect identical or near-identical images.
+
+    Args:
+        samples_dir: Path to the benchmark samples directory
+        dataset_dir: Path to the dataset directory to check
+        hash_size: Size of the perceptual hash (higher = more precise, default 16)
+    """
+    if not samples_dir.exists():
+        print(f"Samples directory not found: {samples_dir}")
+        return
+    if not dataset_dir.exists():
+        print(f"Dataset directory not found: {dataset_dir}")
+        return
+
+    image_extensions = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff", ".gif", ".heic", ".avif"}
+
+    print("Building hash index from benchmark samples...")
+    sample_hashes: Dict[str, Path] = {}
+
+    sample_files = [f for f in samples_dir.iterdir() if f.suffix.lower() in image_extensions]
+    for sample_file in sample_files:
+        try:
+            img = Image.open(sample_file)
+            phash = str(imagehash.phash(img, hash_size=hash_size))
+            sample_hashes[phash] = sample_file
+        except Exception as e:
+            print(f"⚠️  Could not hash {sample_file.name}: {e}")
+
+    print(f"Indexed {len(sample_hashes)} benchmark samples")
+    print(f"\nScanning dataset for duplicates...")
+
+    dataset_files = [f for f in dataset_dir.iterdir() if f.suffix.lower() in image_extensions]
+    duplicates_found = []
+
+    for dataset_file in dataset_files:
+        try:
+            img = Image.open(dataset_file)
+            phash = str(imagehash.phash(img, hash_size=hash_size))
+
+            if phash in sample_hashes:
+                match = sample_hashes[phash]
+                duplicates_found.append((dataset_file, match))
+                print(f"🔴 DUPLICATE: {dataset_file} matches {match}")
+        except Exception as e:
+            print(f"⚠️  Could not hash {dataset_file.name}: {e}")
+
+    print("\n" + "=" * 60)
+    if duplicates_found:
+        print(f"Found {len(duplicates_found)} duplicate(s):")
+        for dataset_file, sample_file in duplicates_found:
+            print(f"  {dataset_file} -> {sample_file}")
+    else:
+        print("✅ No duplicates found - dataset is clean!")
+    print("=" * 60)
+
+
 # ============================================================================
 # GROUND TRUTH GENERATION FUNCTIONS
 # ============================================================================
@@ -357,19 +419,23 @@ def save_ground_truth_file(
 class VisionLLMOrchestrator:
     """Orchestrator for running vision LLM benchmarks and generating ground truth."""
 
-    def __init__(self, config_path: str = "config.yaml"):
+    def __init__(self, config: Dict[str, Any] = None, config_path: str = "config.yaml"):
         """
         Initialize the orchestrator.
 
         Args:
+            config: Configuration dictionary (takes precedence over config_path)
             config_path: Path to the configuration file
         """
         # Load environment variables
         load_dotenv()
 
         # Load configuration
-        with open(config_path, "r") as f:
-            self.config = yaml.safe_load(f)
+        if config is not None:
+            self.config = config
+        else:
+            with open(config_path, "r") as f:
+                self.config = yaml.safe_load(f)
 
         # Get API key
         self.api_key = os.getenv("OPENROUTER_API_KEY")
@@ -557,7 +623,8 @@ class VisionLLMOrchestrator:
         print(f"Results will be saved to: {results_dir}")
 
         # Discover samples
-        samples = discover_samples(Path("Samples"))
+        samples_dir = Path(self.config.get("active_dir", "Samples"))
+        samples = discover_samples(samples_dir)
         print(f"\nFound {len(samples)} samples")
         print(f"Testing {len(self.models)} models")
 
@@ -598,7 +665,7 @@ class VisionLLMOrchestrator:
         Returns:
             Dictionary with status and details
         """
-        samples_dir = Path("Samples")
+        samples_dir = Path(self.config.get("active_dir", "Samples"))
         image_name = image_file.stem
         ground_truth_path = samples_dir / f"{image_name}.json"
 
@@ -658,7 +725,7 @@ class VisionLLMOrchestrator:
         print(f"Replace all: {replace_all}")
 
         # Discover samples
-        samples_dir = Path("Samples")
+        samples_dir = Path(self.config.get("active_dir", "Samples"))
         
         # Find all images in the samples directory
         image_files = []
@@ -740,14 +807,45 @@ def main():
         action="store_true",
         help="Rename and convert images in Samples to kitchen_<num>.jpg format",
     )
+    parser.add_argument(
+        "--check-contamination",
+        action="store_true",
+        help="Check if dataset images are duplicates of benchmark samples",
+    )
+    parser.add_argument(
+        "--active-dir",
+        type=str,
+        help="Override active_dir from config",
+    )
+    parser.add_argument(
+        "--dataset-dir",
+        type=str,
+        help="Override dataset_dir from config",
+    )
     args = parser.parse_args()
 
     try:
+        with open("config.yaml", "r") as f:
+            config = yaml.safe_load(f)
+
+        # CLI overrides config
+        if args.active_dir:
+            config["active_dir"] = args.active_dir
+        if args.dataset_dir:
+            config["dataset_dir"] = args.dataset_dir
+
         if args.prepare_samples:
-            prepare_samples()
+            samples_dir = Path(config.get("active_dir", "Samples"))
+            prepare_samples(samples_dir)
             return
 
-        orchestrator = VisionLLMOrchestrator()
+        if args.check_contamination:
+            samples_dir = Path(config.get("active_dir", "Samples"))
+            dataset_dir = Path(config.get("dataset_dir", "dataset"))
+            check_contamination(samples_dir, dataset_dir)
+            return
+
+        orchestrator = VisionLLMOrchestrator(config)
 
         if args.generate_ground_truth:
             orchestrator.generate_ground_truth()

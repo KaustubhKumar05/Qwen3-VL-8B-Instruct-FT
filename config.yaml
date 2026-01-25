@@ -15,6 +15,12 @@ ground_truth:
 
 prompt_file_name: base
 
+# Directory containing benchmark sample images (used for prep, ground truth, and benchmarking)
+active_dir: Samples
+
+# Directory containing dataset images (for contamination check)
+dataset_dir: dataset
+
 # OpenRouter API configuration
 openrouter:
   base_url: https://openrouter.ai/api/v1
