@@ -8,7 +8,7 @@
 | Model | Avg Score (%) | Samples | Total Cost | Avg Cost/Request | Time |
 |-------|---------------|---------|------------|------------------|------|
 | qwen/qwen3-vl-8b-instruct | 48.4% | 105 | $0.0720 | $0.0007 | 3.5m |
-| self-hosted | 49.9% | 105 | $0.3 | 0.0028 | 6.6m |
+| self-hosted | 49.9% | 105 | $0.3000 | $0.0028 | 6.6m |
 | openai/gpt-4.1-mini | 53.5% | 105 | $0.1920 | $0.0018 | 3.3m |
 
 ## Detailed Results by Model
