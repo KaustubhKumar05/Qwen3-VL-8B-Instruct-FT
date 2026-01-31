@@ -18,7 +18,7 @@ from PIL import Image
 from src.judge import KitchenAnalysisJudge
 from src.openrouter_client import OpenRouterClient
 from src.reporter import BenchmarkReporter
-
+from src.selfhosted_client import SelfHostedClient
 
 # ============================================================================
 # CORE UTILITY FUNCTIONS (Reusable)
@@ -46,9 +46,7 @@ def load_prompts(config: Dict[str, Any]) -> Tuple[str, str]:
 
     # Parse the simplified prompt file
     if "SYSTEM_PROMPT:" not in content or "USER_PROMPT:" not in content:
-        raise ValueError(
-            "Prompt file must contain SYSTEM_PROMPT: and USER_PROMPT: sections"
-        )
+        raise ValueError("Prompt file must contain SYSTEM_PROMPT: and USER_PROMPT: sections")
 
     # Extract system prompt
     system_start = content.find("SYSTEM_PROMPT:") + len("SYSTEM_PROMPT:")
@@ -90,9 +88,7 @@ def discover_samples(samples_dir: Path) -> List[Dict[str, Path]]:
                 break
 
         if image_file:
-            samples.append(
-                {"name": image_name, "image": image_file, "ground_truth": json_file}
-            )
+            samples.append({"name": image_name, "image": image_file, "ground_truth": json_file})
         else:
             print(f"Warning: No image found for {json_file.name}")
 
@@ -247,9 +243,7 @@ def prepare_samples(samples_dir: Path) -> None:
         return
 
     image_extensions = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff", ".gif", ".heic"}
-    image_files = sorted(
-        [f for f in samples_dir.iterdir() if f.suffix.lower() in image_extensions]
-    )
+    image_files = sorted([f for f in samples_dir.iterdir() if f.suffix.lower() in image_extensions])
 
     if not image_files:
         print("No images found in Samples directory")
@@ -339,7 +333,7 @@ def check_contamination(samples_dir: Path, dataset_dir: Path, hash_size: int = 1
             print(f"⚠️  Could not hash {sample_file.name}: {e}")
 
     print(f"Indexed {len(sample_hashes)} benchmark samples")
-    print(f"\nScanning dataset for duplicates...")
+    print("\nScanning dataset for duplicates...")
 
     dataset_files = [f for f in dataset_dir.iterdir() if f.suffix.lower() in image_extensions]
     duplicates_found = []
@@ -443,9 +437,7 @@ def generate_ground_truth_for_sample(
     return parsed_response
 
 
-def save_ground_truth_file(
-    parsed_response: Dict[str, Any], output_path: Path
-) -> None:
+def save_ground_truth_file(parsed_response: Dict[str, Any], output_path: Path) -> None:
     """
     Save parsed response as a ground truth JSON file.
 
@@ -492,12 +484,18 @@ class VisionLLMOrchestrator:
                 "Please create a .env file with your API key."
             )
 
-        # Initialize client
+        # Initialize OpenRouter client
         openrouter_config = self.config.get("openrouter", {})
         self.client = OpenRouterClient(
             api_key=self.api_key,
             base_url=openrouter_config.get("base_url", "https://openrouter.ai/api/v1"),
             timeout=openrouter_config.get("timeout", 60),
+        )
+
+        # Initialize self-hosted client
+        selfhosted_config = self.config.get("selfhosted", {})
+        self.selfhosted_client = SelfHostedClient(
+            timeout=selfhosted_config.get("timeout", 120),
         )
 
         # Initialize judge
@@ -510,6 +508,10 @@ class VisionLLMOrchestrator:
         # Get models to test
         self.models = self.config.get("models_to_test", [])
 
+    def _is_selfhosted_model(self, model: str) -> bool:
+        """Check if a model should use the self-hosted endpoint."""
+        return model.startswith("self-hosted/") or model == "self-hosted"
+
     def run_model_score_and_save_sample(
         self, model: str, sample: Dict[str, Path]
     ) -> Dict[str, Any]:
@@ -517,21 +519,28 @@ class VisionLLMOrchestrator:
         Run model on a sample, score it against ground truth, and save results.
 
         Args:
-            model: Model identifier
+            model: Model identifier (use "self-hosted" for the Modal vLLM endpoint)
             sample: Sample dictionary with image and ground_truth paths
 
         Returns:
             Dictionary with results including score, usage, and response
         """
         try:
-            # Call the model
-            response = call_model_for_image(
-                self.client,
-                model,
-                sample["image"],
-                self.system_prompt,
-                self.user_prompt,
-            )
+            # Call the appropriate backend
+            if self._is_selfhosted_model(model):
+                response = self.selfhosted_client.analyze_image(
+                    image_path=sample["image"],
+                    system_prompt=self.system_prompt,
+                    user_prompt=self.user_prompt,
+                )
+            else:
+                response = call_model_for_image(
+                    self.client,
+                    model,
+                    sample["image"],
+                    self.system_prompt,
+                    self.user_prompt,
+                )
 
             # Parse the JSON response
             parsed_response = parse_json_response(response["response"])
@@ -572,7 +581,9 @@ class VisionLLMOrchestrator:
                 "error": str(e),
             }
 
-    def benchmark_model_on_all_samples(self, model: str, samples: List[Dict[str, Path]]) -> Dict[str, Any]:
+    def benchmark_model_on_all_samples(
+        self, model: str, samples: List[Dict[str, Path]]
+    ) -> Dict[str, Any]:
         """
         Benchmark a single model on all samples (parallelized), score and aggregate results.
 
@@ -583,6 +594,11 @@ class VisionLLMOrchestrator:
         Returns:
             Dictionary with aggregated results for the model
         """
+        # Warmup self-hosted endpoint before starting (only once)
+        if self._is_selfhosted_model(model):
+            if not self.selfhosted_client.warmup():
+                raise Exception("Self-hosted endpoint failed to start")
+
         print(f"\nTesting model: {model}")
         print("=" * 60)
 
@@ -615,13 +631,9 @@ class VisionLLMOrchestrator:
         successful_results = [r for r in sample_results if r["success"]]
 
         if successful_results:
-            average_score = sum(r["score"] for r in successful_results) / len(
-                successful_results
-            )
+            average_score = sum(r["score"] for r in successful_results) / len(successful_results)
             total_tokens = sum(r["usage"]["total_tokens"] for r in successful_results)
-            total_prompt_tokens = sum(
-                r["usage"]["prompt_tokens"] for r in successful_results
-            )
+            total_prompt_tokens = sum(r["usage"]["prompt_tokens"] for r in successful_results)
             total_completion_tokens = sum(
                 r["usage"]["completion_tokens"] for r in successful_results
             )
@@ -703,12 +715,12 @@ class VisionLLMOrchestrator:
     ) -> Dict[str, Any]:
         """
         Generate ground truth for a single image file.
-        
+
         Args:
             image_file: Path to the image file
             benchmark_model: Model to use for generation
             replace_all: Whether to replace existing files
-            
+
         Returns:
             Dictionary with status and details
         """
@@ -736,7 +748,7 @@ class VisionLLMOrchestrator:
 
             # Save ground truth file
             save_ground_truth_file(parsed_response, ground_truth_path)
-            
+
             return {
                 "name": image_name,
                 "status": "success",
@@ -773,14 +785,14 @@ class VisionLLMOrchestrator:
 
         # Discover samples
         samples_dir = Path(self.config.get("active_dir", "Samples"))
-        
+
         # Find all images in the samples directory
         image_files = []
         for ext in ["*.jpg", "*.jpeg", "*.png"]:
             image_files.extend(samples_dir.glob(ext))
-        
+
         image_files = sorted(image_files)
-        
+
         if not image_files:
             print("No images found in Samples directory")
             return
@@ -790,7 +802,7 @@ class VisionLLMOrchestrator:
         # Get max concurrent requests from config
         openrouter_config = self.config.get("openrouter", {})
         max_workers = openrouter_config.get("max_concurrent_requests", 5)
-        
+
         print(f"Processing with {max_workers} concurrent requests...")
         print()
 
@@ -800,7 +812,9 @@ class VisionLLMOrchestrator:
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             # Submit all tasks
             future_to_image = {
-                executor.submit(self._generate_single_ground_truth, image_file, benchmark_model, replace_all): image_file
+                executor.submit(
+                    self._generate_single_ground_truth, image_file, benchmark_model, replace_all
+                ): image_file
                 for image_file in image_files
             }
 
@@ -808,12 +822,12 @@ class VisionLLMOrchestrator:
             for future in as_completed(future_to_image):
                 result = future.result()
                 results.append(result)
-                
+
                 # Print status
                 name = result["name"]
                 status = result["status"]
                 message = result["message"]
-                
+
                 if status == "success":
                     print(f"✅ {name}: {message}")
                 elif status == "skipped":
@@ -841,9 +855,7 @@ class VisionLLMOrchestrator:
 
 def main():
     """Main entry point."""
-    parser = argparse.ArgumentParser(
-        description="Vision LLM Benchmark and Ground Truth Generator"
-    )
+    parser = argparse.ArgumentParser(description="Vision LLM Benchmark and Ground Truth Generator")
     parser.add_argument(
         "--generate-ground-truth",
         action="store_true",

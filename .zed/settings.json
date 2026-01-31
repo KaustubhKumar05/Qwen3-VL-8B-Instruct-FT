@@ -1,0 +1,23 @@
+{
+  "languages": {
+    "Python": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "uv",
+          "arguments": ["run", "ruff", "format", "-"]
+        }
+      },
+      "language_servers": ["ruff"]
+    }
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 100
+        }
+      }
+    }
+  }
+}

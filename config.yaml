@@ -1,13 +1,18 @@
 # Vision LLM Benchmark Configuration
 
-# List of models to test from OpenRouter
+# List of models to test (OpenRouter models or "self-hosted" for Modal)
 models_to_test:
+  - self-hosted  # Self-hosted Qwen3-VL-8B on Modal
   - qwen/qwen3-vl-8b-instruct
-  - openai/gpt-5.2
   - openai/gpt-4.1-mini
+  # - openai/gpt-5.2
 
 # Model to use for generating ground truth (when regenerating ground truth files)
 benchmark_model: openai/gpt-5.2
+
+# Self-hosted Modal vLLM configuration
+selfhosted:
+  timeout: 120  # Longer timeout for cold starts
 
 # Ground truth regeneration behavior
 ground_truth:
