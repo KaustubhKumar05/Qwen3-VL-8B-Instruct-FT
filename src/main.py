@@ -16,9 +16,9 @@ from dotenv import load_dotenv
 from PIL import Image
 
 from src.judge import KitchenAnalysisJudge
+from src.modal_hosted_client import ModalHostedClient
 from src.openrouter_client import OpenRouterClient
 from src.reporter import BenchmarkReporter
-from src.selfhosted_client import SelfHostedClient
 
 # ============================================================================
 # CORE UTILITY FUNCTIONS (Reusable)
@@ -492,10 +492,10 @@ class VisionLLMOrchestrator:
             timeout=openrouter_config.get("timeout", 60),
         )
 
-        # Initialize self-hosted client
-        selfhosted_config = self.config.get("selfhosted", {})
-        self.selfhosted_client = SelfHostedClient(
-            timeout=selfhosted_config.get("timeout", 120),
+        # Initialize modal-hosted client
+        modal_config = self.config.get("modal", {})
+        self.modal_client = ModalHostedClient(
+            timeout=modal_config.get("timeout", 120),
         )
 
         # Initialize judge
@@ -508,9 +508,9 @@ class VisionLLMOrchestrator:
         # Get models to test
         self.models = self.config.get("models_to_test", [])
 
-    def _is_selfhosted_model(self, model: str) -> bool:
-        """Check if a model should use the self-hosted endpoint."""
-        return model.startswith("self-hosted/") or model == "self-hosted"
+    def _is_modal_model(self, model: str) -> bool:
+        """Check if a model should use the modal-hosted endpoint."""
+        return model.startswith("modal-hosted/") or model == "modal-hosted"
 
     def run_model_score_and_save_sample(
         self, model: str, sample: Dict[str, Path]
@@ -519,7 +519,7 @@ class VisionLLMOrchestrator:
         Run model on a sample, score it against ground truth, and save results.
 
         Args:
-            model: Model identifier (use "self-hosted" for the Modal vLLM endpoint)
+            model: Model identifier (use "modal-hosted" for the Modal vLLM endpoint)
             sample: Sample dictionary with image and ground_truth paths
 
         Returns:
@@ -527,8 +527,8 @@ class VisionLLMOrchestrator:
         """
         try:
             # Call the appropriate backend
-            if self._is_selfhosted_model(model):
-                response = self.selfhosted_client.analyze_image(
+            if self._is_modal_model(model):
+                response = self.modal_client.analyze_image(
                     image_path=sample["image"],
                     system_prompt=self.system_prompt,
                     user_prompt=self.user_prompt,
@@ -594,10 +594,10 @@ class VisionLLMOrchestrator:
         Returns:
             Dictionary with aggregated results for the model
         """
-        # Warmup self-hosted endpoint before starting (only once)
-        if self._is_selfhosted_model(model):
-            if not self.selfhosted_client.warmup():
-                raise Exception("Self-hosted endpoint failed to start")
+        # Warmup modal-hosted endpoint before starting (only once)
+        if self._is_modal_model(model):
+            if not self.modal_client.warmup():
+                raise Exception("modal-hosted endpoint failed to start")
 
         print(f"\nTesting model: {model}")
         print("=" * 60)

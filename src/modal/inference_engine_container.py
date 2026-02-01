@@ -5,17 +5,25 @@ import aiohttp
 
 import modal
 
-MODEL_NAME = "Qwen/Qwen3-VL-8B-Instruct"
+# MODEL_NAME = "Qwen/Qwen3-VL-8B-Instruct"
+MODEL_NAME = "Qwen/Qwen3-VL-8B-Instruct-FP8"
+
 # Oct 2025 on https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct/commits/main
-MODEL_REVISION = "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b"
+# MODEL_REVISION = "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b"
 
-GPU = "L40S"
+# Nov 2025 on https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct-FP8/commits/main
+MODEL_REVISION = "9cdc6310a8cb770ce18efaf4e9935334512aee45"
 
-MAX_SEQ_LEN = "153520"
+
+# GPU = "L40S"
+GPU = "A10G"
+
+MAX_SEQ_LEN = "16384"
 
 FAST_BOOT = True
 
-PUBLIC_ENDPOINT = "https://kaustubhkumar05--inference-engine-serve.modal.run"
+# PUBLIC_ENDPOINT = "https://kaustubhkumar05--inference-engine-serve.modal.run"
+PUBLIC_ENDPOINT = "https://kaustubhkumar05--inference-engine-fp8-serve.modal.run"
 
 inference_engine = (
     modal.Image.from_registry("nvidia/cuda:12.8.0-devel-ubuntu22.04", add_python="3.12")
@@ -30,7 +38,7 @@ inference_engine_cache_vol = modal.Volume.from_name(
 )
 
 
-app = modal.App("inference-engine")
+app = modal.App("inference-engine-fp8")
 N_GPU = 1
 STARTUP_TIMEOUT = 5 * 60  # 5 min to start vLLM
 SCALEDOWN_WINDOW = 1 * 60  # 2 min idle before shutdown
@@ -72,6 +80,7 @@ def serve():
     cmd += ["--enforce-eager" if FAST_BOOT else "--no-enforce-eager"]
     cmd += ["--tensor-parallel-size", str(N_GPU)]
     cmd += ["--max-model-len", str(MAX_SEQ_LEN)]
+    cmd += ["--enable-prefix-caching"]
 
     print(*cmd)
     subprocess.Popen(" ".join(cmd), shell=True)
