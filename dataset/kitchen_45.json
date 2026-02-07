@@ -4,19 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#B9A89E",
-                "coverage": 90
+                "hex": "#C5B0A8",
+                "coverage": 80
             },
             {
-                "hex": "#F4F2EF",
-                "coverage": 10
+                "hex": "#B49B92",
+                "coverage": 20
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "gold",
-            "hex": "#C9A24A"
+            "finish": "brushed_steel",
+            "hex": "#BFC3C7"
         }
     },
     "wall": {
@@ -24,11 +24,11 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F3F1EC",
+                "hex": "#EFE8DF",
                 "coverage": 85
             },
             {
-                "hex": "#9A836F",
+                "hex": "#B79B86",
                 "coverage": 15
             }
         ],
@@ -55,11 +55,11 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F3F1EC",
+                "hex": "#EFE8DF",
                 "coverage": 85
             },
             {
-                "hex": "#9A836F",
+                "hex": "#B79B86",
                 "coverage": 15
             }
         ],
@@ -75,7 +75,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#B87A66",
+                "hex": "#C48A7E",
                 "coverage": 100
             }
         ]
@@ -85,16 +85,16 @@
         "finishFamily": "Wood",
         "colors": [
             {
-                "hex": "#A68871",
+                "hex": "#B7A79B",
                 "coverage": 100
             }
         ]
     },
     "ceilingLighting": {
         "detected": true,
-        "type": "unknown",
-        "count": 2,
-        "layout": "unknown",
+        "type": "recessed_downlights",
+        "count": 1,
+        "layout": "single",
         "colorTemperature": "warm_white"
     }
 }

@@ -4,19 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#A9C5B0",
-                "coverage": 90
+                "hex": "#A8C3B5",
+                "coverage": 92
             },
             {
-                "hex": "#1F1F1F",
-                "coverage": 10
+                "hex": "#1A1A1A",
+                "coverage": 8
             }
         ],
         "handle": {
             "detected": true,
             "type": "gola",
             "finish": "matte_black",
-            "hex": "#1F1F1F"
+            "hex": "#1A1A1A"
         }
     },
     "wall": {
@@ -24,12 +24,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F4F4F4",
-                "coverage": 92
+                "hex": "#F2F2F2",
+                "coverage": 88
             },
             {
-                "hex": "#1F1F1F",
-                "coverage": 8
+                "hex": "#1A1A1A",
+                "coverage": 12
             }
         ],
         "handle": {
@@ -41,19 +41,15 @@
     },
     "tall": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Glass",
         "colors": [
             {
-                "hex": "#5D6065",
-                "coverage": 60
+                "hex": "#2B2B2B",
+                "coverage": 85
             },
             {
-                "hex": "#F4F4F4",
-                "coverage": 30
-            },
-            {
-                "hex": "#1F1F1F",
-                "coverage": 10
+                "hex": "#6E6E6E",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -68,11 +64,11 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#B3CDB8",
+                "hex": "#A8C3B5",
                 "coverage": 95
             },
             {
-                "hex": "#1F1F1F",
+                "hex": "#1A1A1A",
                 "coverage": 5
             }
         ],
@@ -88,7 +84,7 @@
         "finishFamily": "Stone",
         "colors": [
             {
-                "hex": "#F3EEE6",
+                "hex": "#F7F4EE",
                 "coverage": 100
             }
         ]
@@ -98,7 +94,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E6E6E6",
+                "hex": "#EDEDED",
                 "coverage": 100
             }
         ]

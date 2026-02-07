@@ -4,19 +4,23 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#8A8077",
-                "coverage": 85
+                "hex": "#CDC8BF",
+                "coverage": 80
             },
             {
-                "hex": "#1F1F1F",
+                "hex": "#2A2A2A",
                 "coverage": 15
+            },
+            {
+                "hex": "#B5B0A8",
+                "coverage": 5
             }
         ],
         "handle": {
-            "detected": false,
-            "type": "handleless",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "gola",
+            "finish": "black",
+            "hex": "#1F1F1F"
         }
     },
     "wall": {
@@ -24,41 +28,67 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#E7E2D9",
+                "hex": "#D2CDC4",
                 "coverage": 75
+            },
+            {
+                "hex": "#2E2E2E",
+                "coverage": 20
+            },
+            {
+                "hex": "#BDB8AF",
+                "coverage": 5
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "gola",
+            "finish": "black",
+            "hex": "#1F1F1F"
+        }
+    },
+    "tall": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#CFCAC1",
+                "coverage": 70
             },
             {
                 "hex": "#2C2C2C",
                 "coverage": 25
+            },
+            {
+                "hex": "#B7B2A9",
+                "coverage": 5
             }
         ],
         "handle": {
-            "detected": false,
-            "type": "handleless",
-            "finish": "unknown",
-            "hex": null
-        }
-    },
-    "tall": {
-        "detected": false,
-        "finishFamily": "Unknown",
-        "colors": [],
-        "handle": {
-            "detected": false,
-            "type": "unknown",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "gola",
+            "finish": "black",
+            "hex": "#1F1F1F"
         }
     },
     "loft": {
-        "detected": false,
-        "finishFamily": "Unknown",
-        "colors": [],
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#D3CEC5",
+                "coverage": 90
+            },
+            {
+                "hex": "#2C2C2C",
+                "coverage": 10
+            }
+        ],
         "handle": {
-            "detected": false,
-            "type": "unknown",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "gola",
+            "finish": "black",
+            "hex": "#1F1F1F"
         }
     },
     "dado": {
@@ -66,7 +96,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#C8C1B7",
+                "hex": "#C8C3BB",
                 "coverage": 100
             }
         ]
@@ -76,7 +106,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D1C9BE",
+                "hex": "#BDB9B1",
                 "coverage": 100
             }
         ]
@@ -84,7 +114,7 @@
     "ceilingLighting": {
         "detected": true,
         "type": "panel",
-        "count": 4,
+        "count": 6,
         "layout": "grid",
         "colorTemperature": "neutral_white"
     }

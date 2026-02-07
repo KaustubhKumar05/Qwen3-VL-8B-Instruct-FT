@@ -492,11 +492,9 @@ class VisionLLMOrchestrator:
             timeout=openrouter_config.get("timeout", 60),
         )
 
-        # Initialize modal-hosted client
-        modal_config = self.config.get("modal", {})
-        self.modal_client = ModalHostedClient(
-            timeout=modal_config.get("timeout", 120),
-        )
+        # Modal clients created on-demand per model
+        self.modal_timeout = self.config.get("modal", {}).get("timeout", 120)
+        self._modal_clients: dict[str, ModalHostedClient] = {}
 
         # Initialize judge
         scoring_weights = self.config.get("scoring_weights", {})
@@ -510,7 +508,13 @@ class VisionLLMOrchestrator:
 
     def _is_modal_model(self, model: str) -> bool:
         """Check if a model should use the modal-hosted endpoint."""
-        return model.startswith("modal-hosted/") or model == "modal-hosted"
+        return model.startswith("modal-hosted/")
+
+    def _get_modal_client(self, model: str) -> ModalHostedClient:
+        """Get or create modal client for the given model."""
+        if model not in self._modal_clients:
+            self._modal_clients[model] = ModalHostedClient(model, self.modal_timeout)
+        return self._modal_clients[model]
 
     def run_model_score_and_save_sample(
         self, model: str, sample: Dict[str, Path]
@@ -528,7 +532,8 @@ class VisionLLMOrchestrator:
         try:
             # Call the appropriate backend
             if self._is_modal_model(model):
-                response = self.modal_client.analyze_image(
+                modal_client = self._get_modal_client(model)
+                response = modal_client.analyze_image(
                     image_path=sample["image"],
                     system_prompt=self.system_prompt,
                     user_prompt=self.user_prompt,
@@ -596,7 +601,8 @@ class VisionLLMOrchestrator:
         """
         # Warmup modal-hosted endpoint before starting (only once)
         if self._is_modal_model(model):
-            if not self.modal_client.warmup():
+            modal_client = self._get_modal_client(model)
+            if not modal_client.warmup():
                 raise Exception("modal-hosted endpoint failed to start")
 
         print(f"\nTesting model: {model}")
@@ -606,8 +612,7 @@ class VisionLLMOrchestrator:
         sample_results = []
 
         # Get max concurrent requests from config
-        openrouter_config = self.config.get("openrouter", {})
-        max_workers = openrouter_config.get("max_concurrent_requests", 5)
+        max_workers = self.config.get("max_concurrent_requests", 5)
 
         print(f"Running with {max_workers} concurrent requests...")
 
@@ -800,8 +805,7 @@ class VisionLLMOrchestrator:
         print(f"Found {len(image_files)} images")
 
         # Get max concurrent requests from config
-        openrouter_config = self.config.get("openrouter", {})
-        max_workers = openrouter_config.get("max_concurrent_requests", 5)
+        max_workers = self.config.get("max_concurrent_requests", 5)
 
         print(f"Processing with {max_workers} concurrent requests...")
         print()

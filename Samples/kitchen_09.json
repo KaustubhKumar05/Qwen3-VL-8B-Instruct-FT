@@ -4,12 +4,8 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#A78776",
-                "coverage": 90
-            },
-            {
-                "hex": "#7E5F53",
-                "coverage": 10
+                "hex": "#B49382",
+                "coverage": 100
             }
         ],
         "handle": {
@@ -24,12 +20,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F2F1EE",
-                "coverage": 85
+                "hex": "#F3F3F3",
+                "coverage": 70
             },
             {
-                "hex": "#E2D6CF",
-                "coverage": 15
+                "hex": "#B49382",
+                "coverage": 30
             }
         ],
         "handle": {
@@ -55,24 +51,20 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#A78776",
-                "coverage": 95
-            },
-            {
-                "hex": "#7E5F53",
-                "coverage": 5
+                "hex": "#B49382",
+                "coverage": 100
             }
         ],
         "handle": {
-            "detected": true,
-            "type": "bar",
-            "finish": "brushed_steel",
-            "hex": "#B8B8B8"
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
         }
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
                 "hex": "#EDEDED",
@@ -82,19 +74,19 @@
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E8E2D9",
+                "hex": "#D4CCC1",
                 "coverage": 100
             }
         ]
     },
     "ceilingLighting": {
-        "detected": false,
-        "type": "unknown",
-        "count": null,
-        "layout": "unknown",
-        "colorTemperature": "unknown"
+        "detected": true,
+        "type": "recessed_downlights",
+        "count": 4,
+        "layout": "linear",
+        "colorTemperature": "warm_white"
     }
 }

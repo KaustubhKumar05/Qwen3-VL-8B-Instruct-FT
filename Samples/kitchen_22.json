@@ -8,15 +8,15 @@
                 "coverage": 65
             },
             {
-                "hex": "#E88A2D",
+                "hex": "#F28A1A",
                 "coverage": 35
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "brushed_steel",
-            "hex": "#BFC3C7"
+            "finish": "chrome",
+            "hex": "#C0C0C0"
         }
     },
     "wall": {
@@ -24,23 +24,19 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#F3F3F3",
+                "hex": "#F2F2F2",
                 "coverage": 55
             },
             {
-                "hex": "#E78A2C",
-                "coverage": 35
-            },
-            {
-                "hex": "#1E1E1E",
-                "coverage": 10
+                "hex": "#F28A1A",
+                "coverage": 45
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "brushed_steel",
-            "hex": "#BFC3C7"
+            "finish": "chrome",
+            "hex": "#C0C0C0"
         }
     },
     "tall": {
@@ -70,7 +66,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#1A1A1A",
+                "hex": "#E6E6E6",
                 "coverage": 100
             }
         ]
@@ -80,7 +76,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D7C8AD",
+                "hex": "#E7D9B8",
                 "coverage": 100
             }
         ]
@@ -88,7 +84,7 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 3,
+        "count": 2,
         "layout": "linear",
         "colorTemperature": "neutral_white"
     }

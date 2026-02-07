@@ -4,22 +4,14 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#D7A700",
-                "coverage": 85
-            },
-            {
-                "hex": "#F3D777",
-                "coverage": 10
-            },
-            {
-                "hex": "#B88600",
-                "coverage": 5
+                "hex": "#D7AA14",
+                "coverage": 100
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "chrome",
+            "finish": "brushed_steel",
             "hex": "#C0C0C0"
         }
     },
@@ -28,22 +20,14 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#D7A700",
-                "coverage": 80
-            },
-            {
-                "hex": "#F6DE88",
-                "coverage": 15
-            },
-            {
-                "hex": "#B88600",
-                "coverage": 5
+                "hex": "#D7AA14",
+                "coverage": 100
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "chrome",
+            "finish": "brushed_steel",
             "hex": "#C0C0C0"
         }
     },
@@ -63,22 +47,14 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#D7A700",
-                "coverage": 80
-            },
-            {
-                "hex": "#F6DE88",
-                "coverage": 15
-            },
-            {
-                "hex": "#B88600",
-                "coverage": 5
+                "hex": "#D7AA14",
+                "coverage": 100
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "chrome",
+            "finish": "brushed_steel",
             "hex": "#C0C0C0"
         }
     },
@@ -87,7 +63,7 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#CFCFCF",
+                "hex": "#A7A7A7",
                 "coverage": 100
             }
         ]
@@ -97,7 +73,7 @@
         "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#D7D0C7",
+                "hex": "#DDD2C4",
                 "coverage": 100
             }
         ]

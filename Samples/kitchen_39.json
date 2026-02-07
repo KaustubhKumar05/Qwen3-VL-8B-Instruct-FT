@@ -4,19 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#2F8E84",
-                "coverage": 88
+                "hex": "#2B8F87",
+                "coverage": 95
             },
             {
-                "hex": "#1F2326",
-                "coverage": 12
+                "hex": "#1F1F1F",
+                "coverage": 5
             }
         ],
         "handle": {
-            "detected": true,
-            "type": "knob",
-            "finish": "gold",
-            "hex": "#C6A23A"
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
         }
     },
     "wall": {
@@ -24,19 +24,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#2F8E84",
-                "coverage": 65
+                "hex": "#A47A53",
+                "coverage": 60
             },
             {
-                "hex": "#A67B4F",
-                "coverage": 35
+                "hex": "#2B8F87",
+                "coverage": 40
             }
         ],
         "handle": {
-            "detected": true,
-            "type": "knob",
-            "finish": "gold",
-            "hex": "#C6A23A"
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
         }
     },
     "tall": {
@@ -44,19 +44,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#2F8E84",
-                "coverage": 55
+                "hex": "#2B8F87",
+                "coverage": 85
             },
             {
-                "hex": "#0E0F11",
-                "coverage": 45
+                "hex": "#1B1B1B",
+                "coverage": 15
             }
         ],
         "handle": {
-            "detected": true,
-            "type": "knob",
-            "finish": "gold",
-            "hex": "#C6A23A"
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
         }
     },
     "loft": {
@@ -64,19 +64,15 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#2F8E84",
-                "coverage": 70
-            },
-            {
-                "hex": "#A67B4F",
-                "coverage": 30
+                "hex": "#2B8F87",
+                "coverage": 100
             }
         ],
         "handle": {
-            "detected": true,
-            "type": "knob",
-            "finish": "gold",
-            "hex": "#C6A23A"
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
         }
     },
     "dado": {
@@ -84,7 +80,7 @@
         "finishFamily": "Stone",
         "colors": [
             {
-                "hex": "#B8BCC2",
+                "hex": "#BFC2C5",
                 "coverage": 100
             }
         ]
@@ -94,7 +90,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#BFC3C7",
+                "hex": "#C9C9C7",
                 "coverage": 100
             }
         ]
@@ -102,7 +98,7 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 3,
+        "count": 4,
         "layout": "linear",
         "colorTemperature": "neutral_white"
     }

@@ -4,35 +4,11 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#DAD5D1",
-                "coverage": 55
-            },
-            {
-                "hex": "#8E9E4A",
-                "coverage": 40
-            },
-            {
-                "hex": "#1E1B18",
-                "coverage": 5
-            }
-        ],
-        "handle": {
-            "detected": true,
-            "type": "bar",
-            "finish": "chrome",
-            "hex": "#C7CCD1"
-        }
-    },
-    "wall": {
-        "detected": true,
-        "finishFamily": "Acrylic",
-        "colors": [
-            {
-                "hex": "#8F9F4A",
+                "hex": "#E8E3DA",
                 "coverage": 70
             },
             {
-                "hex": "#D9D4CF",
+                "hex": "#A7C24C",
                 "coverage": 30
             }
         ],
@@ -40,7 +16,27 @@
             "detected": true,
             "type": "bar",
             "finish": "chrome",
-            "hex": "#C7CCD1"
+            "hex": "#C0C0C0"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#A7C24C",
+                "coverage": 65
+            },
+            {
+                "hex": "#E8E3DA",
+                "coverage": 35
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "chrome",
+            "hex": "#C0C0C0"
         }
     },
     "tall": {
@@ -59,15 +55,19 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#8F9F4A",
-                "coverage": 100
+                "hex": "#A7C24C",
+                "coverage": 90
+            },
+            {
+                "hex": "#E8E3DA",
+                "coverage": 10
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "chrome",
-            "hex": "#C7CCD1"
+            "hex": "#C0C0C0"
         }
     },
     "dado": {
@@ -75,7 +75,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#7B7670",
+                "hex": "#7C766E",
                 "coverage": 100
             }
         ]
@@ -88,7 +88,7 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 3,
+        "count": 4,
         "layout": "linear",
         "colorTemperature": "neutral_white"
     }

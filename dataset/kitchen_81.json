@@ -4,15 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#B5A39C",
-                "coverage": 100
+                "hex": "#B6A09A",
+                "coverage": 95
+            },
+            {
+                "hex": "#2B2B2B",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "matte_black",
-            "hex": "#1F1F1F"
+            "hex": "#2B2B2B"
         }
     },
     "wall": {
@@ -20,19 +24,19 @@
         "finishFamily": "Glass",
         "colors": [
             {
-                "hex": "#2C2C2C",
-                "coverage": 85
+                "hex": "#1F1F1F",
+                "coverage": 90
             },
             {
-                "hex": "#8B5A3C",
-                "coverage": 15
+                "hex": "#3A3A3A",
+                "coverage": 10
             }
         ],
         "handle": {
-            "detected": false,
-            "type": "handleless",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "knob",
+            "finish": "matte_black",
+            "hex": "#1F1F1F"
         }
     },
     "tall": {
@@ -51,8 +55,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#B5A39C",
-                "coverage": 100
+                "hex": "#B8A29C",
+                "coverage": 97
+            },
+            {
+                "hex": "#1F1F1F",
+                "coverage": 3
             }
         ],
         "handle": {
@@ -67,7 +75,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D9D6D3",
+                "hex": "#E9E6E3",
                 "coverage": 100
             }
         ]
@@ -77,7 +85,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E8E5E1",
+                "hex": "#EFEDE8",
                 "coverage": 100
             }
         ]

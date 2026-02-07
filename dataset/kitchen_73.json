@@ -4,19 +4,19 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#A01955",
+                "hex": "#A0184A",
                 "coverage": 92
             },
             {
-                "hex": "#C7C7C7",
+                "hex": "#D0D0D0",
                 "coverage": 8
             }
         ],
         "handle": {
             "detected": true,
-            "type": "profile",
+            "type": "bar",
             "finish": "chrome",
-            "hex": "#C7C7C7"
+            "hex": "#C0C0C0"
         }
     },
     "wall": {
@@ -24,25 +24,30 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#A01955",
-                "coverage": 95
+                "hex": "#A0184A",
+                "coverage": 93
             },
             {
-                "hex": "#C7C7C7",
-                "coverage": 5
+                "hex": "#D0D0D0",
+                "coverage": 7
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "chrome",
-            "hex": "#C7C7C7"
+            "hex": "#C0C0C0"
         }
     },
     "tall": {
-        "detected": false,
-        "finishFamily": "Unknown",
-        "colors": [],
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#3B261D",
+                "coverage": 100
+            }
+        ],
         "handle": {
             "detected": false,
             "type": "unknown",
@@ -55,19 +60,19 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#A01955",
-                "coverage": 95
+                "hex": "#A0184A",
+                "coverage": 93
             },
             {
-                "hex": "#C7C7C7",
-                "coverage": 5
+                "hex": "#D0D0D0",
+                "coverage": 7
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "chrome",
-            "hex": "#C7C7C7"
+            "hex": "#C0C0C0"
         }
     },
     "dado": {
@@ -75,7 +80,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D5C5A8",
+                "hex": "#CBB89E",
                 "coverage": 100
             }
         ]
@@ -85,16 +90,16 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E6DDC9",
+                "hex": "#E7E1D6",
                 "coverage": 100
             }
         ]
     },
     "ceilingLighting": {
-        "detected": false,
-        "type": "unknown",
-        "count": null,
-        "layout": "unknown",
-        "colorTemperature": "unknown"
+        "detected": true,
+        "type": "recessed_downlights",
+        "count": 3,
+        "layout": "linear",
+        "colorTemperature": "neutral_white"
     }
 }

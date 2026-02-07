@@ -2,7 +2,7 @@
 
 # List of models to test (OpenRouter models or Modal)
 models_to_test:
-  # - modal-hosted/fp8-prefix_caching  # modal-hosted Qwen3-VL-8B
+  # - modal-hosted/room-analysis-qwen3-vl-8b
   - qwen/qwen3-vl-8b-instruct
   - openai/gpt-4.1-mini
   - openai/gpt-5.2
@@ -10,9 +10,11 @@ models_to_test:
 # Model to use for generating ground truth (when regenerating ground truth files)
 benchmark_model: openai/gpt-5.2
 
+max_concurrent_requests: 5
+
 # Modal vLLM configuration
 modal:
-  timeout: 120  # Longer timeout for cold starts
+  timeout: 120
 
 # Ground truth regeneration behavior
 ground_truth:
@@ -21,7 +23,7 @@ ground_truth:
 prompt_file_name: base
 
 # Directory containing benchmark sample images (used for prep, ground truth, and benchmarking)
-active_dir: dataset
+active_dir: Samples
 
 # Directory containing dataset images (for contamination check)
 dataset_dir: dataset

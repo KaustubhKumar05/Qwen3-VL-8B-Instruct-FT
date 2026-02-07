@@ -4,19 +4,15 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#2CB7B6",
-                "coverage": 92
-            },
-            {
-                "hex": "#1E9D9C",
-                "coverage": 8
+                "hex": "#37BFC6",
+                "coverage": 100
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "gold",
-            "hex": "#C8A24A"
+            "hex": "#C6A24A"
         }
     },
     "wall": {
@@ -25,18 +21,14 @@
         "colors": [
             {
                 "hex": "#F2F2F2",
-                "coverage": 95
-            },
-            {
-                "hex": "#D9D9D9",
-                "coverage": 5
+                "coverage": 100
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "white",
-            "hex": "#F2F2F2"
+            "finish": "chrome",
+            "hex": "#D6D6D6"
         }
     },
     "tall": {
@@ -55,19 +47,15 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#2CB7B6",
-                "coverage": 93
-            },
-            {
-                "hex": "#1E9D9C",
-                "coverage": 7
+                "hex": "#37BFC6",
+                "coverage": 100
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "white",
-            "hex": "#F2F2F2"
+            "finish": "chrome",
+            "hex": "#D6D6D6"
         }
     },
     "dado": {
@@ -75,7 +63,7 @@
         "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#B7A28E",
+                "hex": "#B8A89A",
                 "coverage": 100
             }
         ]
@@ -85,7 +73,7 @@
         "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#BEBBB5",
+                "hex": "#C7C0B6",
                 "coverage": 100
             }
         ]
@@ -95,6 +83,6 @@
         "type": "recessed_downlights",
         "count": 1,
         "layout": "single",
-        "colorTemperature": "neutral_white"
+        "colorTemperature": "unknown"
     }
 }

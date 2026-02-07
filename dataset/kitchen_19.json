@@ -4,11 +4,11 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#7B0D1B",
+                "hex": "#7A0D1F",
                 "coverage": 90
             },
             {
-                "hex": "#520812",
+                "hex": "#3B050F",
                 "coverage": 10
             }
         ],
@@ -16,7 +16,7 @@
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#C0C0C0"
+            "hex": "#B8BCC2"
         }
     },
     "wall": {
@@ -24,11 +24,11 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#7B0D1B",
+                "hex": "#7A0D1F",
                 "coverage": 92
             },
             {
-                "hex": "#520812",
+                "hex": "#3B050F",
                 "coverage": 8
             }
         ],
@@ -36,7 +36,7 @@
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#C0C0C0"
+            "hex": "#B8BCC2"
         }
     },
     "tall": {
@@ -66,7 +66,7 @@
         "finishFamily": "Glass",
         "colors": [
             {
-                "hex": "#CBD5CB",
+                "hex": "#EFE3A8",
                 "coverage": 100
             }
         ]
@@ -76,7 +76,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F2F0EA",
+                "hex": "#B9B9B6",
                 "coverage": 100
             }
         ]
@@ -85,7 +85,7 @@
         "detected": true,
         "type": "recessed_downlights",
         "count": 4,
-        "layout": "linear",
+        "layout": "grid",
         "colorTemperature": "warm_white"
     }
 }

@@ -4,19 +4,23 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#C8B6A3",
+                "hex": "#C9B6A3",
                 "coverage": 85
             },
             {
-                "hex": "#2B2B2B",
-                "coverage": 15
+                "hex": "#1A1A1A",
+                "coverage": 10
+            },
+            {
+                "hex": "#B8B8B8",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "profile",
             "finish": "brushed_steel",
-            "hex": "#B9B9B9"
+            "hex": "#B8B8B8"
         }
     },
     "wall": {
@@ -24,11 +28,11 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F2F0EC",
+                "hex": "#F2F2F0",
                 "coverage": 95
             },
             {
-                "hex": "#DDD6CD",
+                "hex": "#E7DCCF",
                 "coverage": 5
             }
         ],
@@ -44,12 +48,16 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#3A2B22",
+                "hex": "#C9B6A3",
                 "coverage": 70
             },
             {
-                "hex": "#1B1B1B",
-                "coverage": 30
+                "hex": "#F2F2F0",
+                "coverage": 20
+            },
+            {
+                "hex": "#8B6A4A",
+                "coverage": 10
             }
         ],
         "handle": {
@@ -75,17 +83,17 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#7A4B2A",
+                "hex": "#9A6238",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Tile",
+        "finishFamily": "Stone",
         "colors": [
             {
-                "hex": "#D9D0C3",
+                "hex": "#D8D0C3",
                 "coverage": 100
             }
         ]

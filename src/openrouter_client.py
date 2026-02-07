@@ -1,10 +1,11 @@
 """OpenRouter API client for vision LLM interactions."""
 
-import base64
 from pathlib import Path
 from typing import Any, Dict
 
 from openai import OpenAI
+
+from src.utils import encode_image_b64
 
 
 class OpenRouterClient:
@@ -23,18 +24,9 @@ class OpenRouterClient:
         """
         self.client = OpenAI(api_key=api_key, base_url=base_url, timeout=timeout)
 
-    def encode_image(self, image_path: Path) -> str:
-        """
-        Encode an image file to base64.
-
-        Args:
-            image_path: Path to the image file
-
-        Returns:
-            Base64 encoded image string
-        """
-        with open(image_path, "rb") as image_file:
-            return base64.b64encode(image_file.read()).decode("utf-8")
+    def encode_image(self, image_path: Path) -> tuple[str, str]:
+        """Encode an image file to base64 with resizing. Returns (b64, mime_type)."""
+        return encode_image_b64(image_path)
 
     def analyze_image(
         self, model: str, image_path: Path, system_prompt: str, user_prompt: str
@@ -55,18 +47,7 @@ class OpenRouterClient:
                 - cost: Estimated cost (if available)
         """
         # Encode image to base64
-        base64_image = self.encode_image(image_path)
-        image_extension = image_path.suffix.lower().lstrip(".")
-
-        # Determine MIME type
-        mime_types = {
-            "jpg": "image/jpeg",
-            "jpeg": "image/jpeg",
-            "png": "image/png",
-            "gif": "image/gif",
-            "webp": "image/webp",
-        }
-        mime_type = mime_types.get(image_extension, "image/jpeg")
+        base64_image, mime_type = self.encode_image(image_path)
 
         # Create the API request
         try:

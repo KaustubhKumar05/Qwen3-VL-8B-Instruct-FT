@@ -4,11 +4,11 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#2B2C2E",
+                "hex": "#2B2B2D",
                 "coverage": 85
             },
             {
-                "hex": "#3A3B3D",
+                "hex": "#141416",
                 "coverage": 15
             }
         ],
@@ -24,12 +24,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#B9B9BA",
-                "coverage": 75
+                "hex": "#C9C9CC",
+                "coverage": 85
             },
             {
-                "hex": "#9FA0A2",
-                "coverage": 25
+                "hex": "#E6E6E8",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -44,17 +44,17 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#1C1D1F",
+                "hex": "#1A1A1C",
                 "coverage": 90
             },
             {
-                "hex": "#2B2C2E",
+                "hex": "#2D2D30",
                 "coverage": 10
             }
         ],
         "handle": {
             "detected": false,
-            "type": "integrated",
+            "type": "handleless",
             "finish": "unknown",
             "hex": null
         }
@@ -64,12 +64,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#B9B9BA",
-                "coverage": 75
+                "hex": "#C9C9CC",
+                "coverage": 85
             },
             {
-                "hex": "#9FA0A2",
-                "coverage": 25
+                "hex": "#E6E6E8",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -81,20 +81,20 @@
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Stone",
         "colors": [
             {
-                "hex": "#1F2023",
+                "hex": "#2A2A2D",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#C9CACC",
+                "hex": "#C8C7C5",
                 "coverage": 100
             }
         ]
@@ -102,8 +102,8 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 2,
-        "layout": "linear",
-        "colorTemperature": "warm_white"
+        "count": 4,
+        "layout": "grid",
+        "colorTemperature": "neutral_white"
     }
 }

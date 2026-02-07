@@ -4,19 +4,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#7F9FA5",
-                "coverage": 80
+                "hex": "#6F8E8A",
+                "coverage": 85
             },
             {
-                "hex": "#5F7D84",
-                "coverage": 20
+                "hex": "#1F1F1F",
+                "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "matte_black",
-            "hex": "#2B2B2B"
+            "hex": "#1F1F1F"
         }
     },
     "wall": {
@@ -24,19 +24,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#6F9197",
-                "coverage": 75
+                "hex": "#6F8E8A",
+                "coverage": 95
             },
             {
-                "hex": "#516E75",
-                "coverage": 25
+                "hex": "#1F1F1F",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "matte_black",
-            "hex": "#2B2B2B"
+            "hex": "#1F1F1F"
         }
     },
     "tall": {
@@ -44,19 +44,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#6A8C92",
-                "coverage": 70
+                "hex": "#6F8E8A",
+                "coverage": 60
             },
             {
-                "hex": "#4D6970",
-                "coverage": 30
+                "hex": "#BFC3C5",
+                "coverage": 40
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "matte_black",
-            "hex": "#2B2B2B"
+            "hex": "#1F1F1F"
         }
     },
     "loft": {
@@ -64,19 +64,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#6F9197",
-                "coverage": 75
+                "hex": "#6F8E8A",
+                "coverage": 95
             },
             {
-                "hex": "#516E75",
-                "coverage": 25
+                "hex": "#1F1F1F",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "matte_black",
-            "hex": "#2B2B2B"
+            "hex": "#1F1F1F"
         }
     },
     "dado": {
@@ -84,7 +84,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D8CDBE",
+                "hex": "#D7CCBC",
                 "coverage": 100
             }
         ]
@@ -94,7 +94,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#7C6F64",
+                "hex": "#D8D1C7",
                 "coverage": 100
             }
         ]

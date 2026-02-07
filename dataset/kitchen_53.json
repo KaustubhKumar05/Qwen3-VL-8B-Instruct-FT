@@ -4,19 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#9A8C96",
-                "coverage": 92
+                "hex": "#A296A2",
+                "coverage": 95
             },
             {
-                "hex": "#2B2B2B",
-                "coverage": 8
+                "hex": "#2E2E2F",
+                "coverage": 5
             }
         ],
         "handle": {
-            "detected": true,
-            "type": "gola",
-            "finish": "black",
-            "hex": "#2B2B2B"
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
         }
     },
     "wall": {
@@ -24,8 +24,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F2F2F4",
-                "coverage": 100
+                "hex": "#F3F3F4",
+                "coverage": 85
+            },
+            {
+                "hex": "#2B2B2C",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -51,7 +55,7 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#9A8C96",
+                "hex": "#B39AA4",
                 "coverage": 100
             }
         ],
@@ -67,7 +71,7 @@
         "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#E9E7E5",
+                "hex": "#E6E2E3",
                 "coverage": 100
             }
         ]
@@ -77,7 +81,7 @@
         "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#F2F2F2",
+                "hex": "#DDE0E4",
                 "coverage": 100
             }
         ]
@@ -85,8 +89,8 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 3,
+        "count": 2,
         "layout": "linear",
-        "colorTemperature": "neutral_white"
+        "colorTemperature": "warm_white"
     }
 }

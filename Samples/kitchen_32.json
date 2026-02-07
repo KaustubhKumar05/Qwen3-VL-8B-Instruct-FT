@@ -4,15 +4,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#8A4B4A",
-                "coverage": 100
+                "hex": "#8A4A4A",
+                "coverage": 95
+            },
+            {
+                "hex": "#6F3B3B",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "matte_black",
-            "hex": "#1F1F1F"
+            "finish": "black",
+            "hex": "#1A1A1A"
         }
     },
     "wall": {
@@ -20,15 +24,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#8A4B4A",
-                "coverage": 100
+                "hex": "#8A4A4A",
+                "coverage": 95
+            },
+            {
+                "hex": "#6F3B3B",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "matte_black",
-            "hex": "#1F1F1F"
+            "finish": "black",
+            "hex": "#1A1A1A"
         }
     },
     "tall": {
@@ -36,15 +44,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#7E3F40",
-                "coverage": 100
+                "hex": "#8A4A4A",
+                "coverage": 95
+            },
+            {
+                "hex": "#6F3B3B",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "matte_black",
-            "hex": "#1F1F1F"
+            "finish": "black",
+            "hex": "#1A1A1A"
         }
     },
     "loft": {
@@ -52,15 +64,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#8A4B4A",
-                "coverage": 100
+                "hex": "#8A4A4A",
+                "coverage": 95
+            },
+            {
+                "hex": "#6F3B3B",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "matte_black",
-            "hex": "#1F1F1F"
+            "finish": "black",
+            "hex": "#1A1A1A"
         }
     },
     "dado": {
@@ -68,20 +84,15 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F2F1EE",
+                "hex": "#F2F2F2",
                 "coverage": 100
             }
         ]
     },
     "floor": {
-        "detected": true,
-        "finishFamily": "Wood",
-        "colors": [
-            {
-                "hex": "#D8C6A8",
-                "coverage": 100
-            }
-        ]
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": []
     },
     "ceilingLighting": {
         "detected": true,

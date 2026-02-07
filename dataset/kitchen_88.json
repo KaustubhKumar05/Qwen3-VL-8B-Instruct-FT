@@ -1,39 +1,35 @@
 {
     "base": {
         "detected": true,
-        "finishFamily": "Acrylic",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#8C6C6D",
-                "coverage": 85
+                "hex": "#B48F90",
+                "coverage": 94
             },
             {
-                "hex": "#1A1A1A",
-                "coverage": 10
-            },
-            {
-                "hex": "#B7A4A3",
-                "coverage": 5
+                "hex": "#1B1B1B",
+                "coverage": 6
             }
         ],
         "handle": {
             "detected": true,
-            "type": "gola",
+            "type": "edge_profile",
             "finish": "black",
-            "hex": "#1A1A1A"
+            "hex": "#1B1B1B"
         }
     },
     "wall": {
         "detected": true,
-        "finishFamily": "Acrylic",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#A88486",
-                "coverage": 95
+                "hex": "#B48F90",
+                "coverage": 98
             },
             {
-                "hex": "#2A2A2A",
-                "coverage": 5
+                "hex": "#1B1B1B",
+                "coverage": 2
             }
         ],
         "handle": {
@@ -56,15 +52,15 @@
     },
     "loft": {
         "detected": true,
-        "finishFamily": "Acrylic",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#A88486",
-                "coverage": 95
+                "hex": "#B48F90",
+                "coverage": 98
             },
             {
-                "hex": "#2A2A2A",
-                "coverage": 5
+                "hex": "#1B1B1B",
+                "coverage": 2
             }
         ],
         "handle": {
@@ -79,7 +75,7 @@
         "finishFamily": "Stone",
         "colors": [
             {
-                "hex": "#D6CDC3",
+                "hex": "#D6D2CF",
                 "coverage": 100
             }
         ]
@@ -89,16 +85,16 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E6E5E3",
+                "hex": "#E7E5E3",
                 "coverage": 100
             }
         ]
     },
     "ceilingLighting": {
         "detected": true,
-        "type": "chandelier",
-        "count": 1,
-        "layout": "single",
+        "type": "pendant",
+        "count": 5,
+        "layout": "clustered",
         "colorTemperature": "warm_white"
     }
 }

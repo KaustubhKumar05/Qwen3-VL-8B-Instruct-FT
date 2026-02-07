@@ -4,11 +4,11 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#4A2F2A",
+                "hex": "#4B2F2A",
                 "coverage": 55
             },
             {
-                "hex": "#D9C39C",
+                "hex": "#D8C3A3",
                 "coverage": 45
             }
         ],
@@ -16,7 +16,7 @@
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#B9BEC2"
+            "hex": "#B8B8B8"
         }
     },
     "wall": {
@@ -24,15 +24,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#D9C39C",
-                "coverage": 100
+                "hex": "#4B2F2A",
+                "coverage": 55
+            },
+            {
+                "hex": "#D8C3A3",
+                "coverage": 45
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#B9BEC2"
+            "hex": "#B8B8B8"
         }
     },
     "tall": {
@@ -51,37 +55,37 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#4A2F2A",
-                "coverage": 60
+                "hex": "#4B2F2A",
+                "coverage": 55
             },
             {
-                "hex": "#D9C39C",
-                "coverage": 40
+                "hex": "#D8C3A3",
+                "coverage": 45
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#B9BEC2"
+            "hex": "#B8B8B8"
         }
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Tile",
+        "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#CFC6B8",
+                "hex": "#C9C4BC",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Tile",
+        "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#E7E1D8",
+                "hex": "#E8E2D8",
                 "coverage": 100
             }
         ]

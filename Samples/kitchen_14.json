@@ -1,22 +1,22 @@
 {
     "base": {
         "detected": true,
-        "finishFamily": "Acrylic",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F2F2F2",
-                "coverage": 90
+                "hex": "#C7CEC8",
+                "coverage": 85
             },
             {
-                "hex": "#D9D9D9",
-                "coverage": 10
+                "hex": "#B8BFB9",
+                "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "gola",
-            "finish": "brushed_steel",
-            "hex": "#8A8A8A"
+            "finish": "unknown",
+            "hex": null
         }
     },
     "wall": {
@@ -24,19 +24,19 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#F4F4F4",
-                "coverage": 92
+                "hex": "#F2F2F2",
+                "coverage": 95
             },
             {
-                "hex": "#DDDDDD",
-                "coverage": 8
+                "hex": "#E0E0E0",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "matte_black",
-            "hex": "#2B2B2B"
+            "finish": "black",
+            "hex": "#1A1A1A"
         }
     },
     "tall": {
@@ -55,37 +55,37 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#F4F4F4",
-                "coverage": 94
+                "hex": "#F2F2F2",
+                "coverage": 95
             },
             {
-                "hex": "#DEDEDE",
-                "coverage": 6
+                "hex": "#E0E0E0",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "matte_black",
-            "hex": "#2B2B2B"
+            "finish": "black",
+            "hex": "#1A1A1A"
         }
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E6E3E0",
+                "hex": "#E7E7E7",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#EDE7DD",
+                "hex": "#E9E1D6",
                 "coverage": 100
             }
         ]
@@ -93,7 +93,7 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 2,
+        "count": 3,
         "layout": "linear",
         "colorTemperature": "neutral_white"
     }

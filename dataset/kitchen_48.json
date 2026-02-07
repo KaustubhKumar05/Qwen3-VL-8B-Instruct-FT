@@ -4,12 +4,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#3E6B74",
-                "coverage": 85
+                "hex": "#3E6772",
+                "coverage": 95
             },
             {
-                "hex": "#2F5660",
-                "coverage": 15
+                "hex": "#1F1F1F",
+                "coverage": 5
             }
         ],
         "handle": {
@@ -24,12 +24,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#6B4A34",
-                "coverage": 70
+                "hex": "#3E6772",
+                "coverage": 75
             },
             {
-                "hex": "#4F3526",
-                "coverage": 30
+                "hex": "#6B4A35",
+                "coverage": 25
             }
         ],
         "handle": {
@@ -44,12 +44,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#3E6B74",
-                "coverage": 90
+                "hex": "#3E6772",
+                "coverage": 95
             },
             {
-                "hex": "#2F5660",
-                "coverage": 10
+                "hex": "#1F1F1F",
+                "coverage": 5
             }
         ],
         "handle": {
@@ -64,12 +64,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#3E6B74",
-                "coverage": 90
+                "hex": "#3E6772",
+                "coverage": 95
             },
             {
-                "hex": "#2F5660",
-                "coverage": 10
+                "hex": "#1F1F1F",
+                "coverage": 5
             }
         ],
         "handle": {
@@ -84,7 +84,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E6E0D6",
+                "hex": "#E7E1D5",
                 "coverage": 100
             }
         ]
@@ -94,14 +94,14 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#A8A8A6",
+                "hex": "#B8B8B8",
                 "coverage": 100
             }
         ]
     },
     "ceilingLighting": {
         "detected": true,
-        "type": "unknown",
+        "type": "panel",
         "count": 3,
         "layout": "linear",
         "colorTemperature": "neutral_white"

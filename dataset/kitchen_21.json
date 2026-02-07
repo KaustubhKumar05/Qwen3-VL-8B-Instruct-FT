@@ -1,25 +1,21 @@
 {
     "base": {
         "detected": true,
-        "finishFamily": "PU",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#5E748B",
-                "coverage": 88
+                "hex": "#5E768B",
+                "coverage": 92
             },
             {
                 "hex": "#1A1A1A",
                 "coverage": 8
-            },
-            {
-                "hex": "#EDEDED",
-                "coverage": 4
             }
         ],
         "handle": {
             "detected": true,
             "type": "gola",
-            "finish": "black",
+            "finish": "matte_black",
             "hex": "#1A1A1A"
         }
     },
@@ -28,12 +24,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#C8A36F",
-                "coverage": 72
+                "hex": "#C7A37A",
+                "coverage": 78
             },
             {
-                "hex": "#3A241B",
-                "coverage": 28
+                "hex": "#2A1E1A",
+                "coverage": 22
             }
         ],
         "handle": {
@@ -67,29 +63,29 @@
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D3C7B5",
+                "hex": "#D8D0C4",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#CFCFCF",
+                "hex": "#CFCFD2",
                 "coverage": 100
             }
         ]
     },
     "ceilingLighting": {
-        "detected": true,
-        "type": "pendant",
-        "count": 1,
-        "layout": "single",
-        "colorTemperature": "warm_white"
+        "detected": false,
+        "type": "unknown",
+        "count": null,
+        "layout": "unknown",
+        "colorTemperature": "unknown"
     }
 }

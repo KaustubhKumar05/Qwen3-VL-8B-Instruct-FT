@@ -4,19 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#6B6C6E",
-                "coverage": 90
+                "hex": "#5B5C5F",
+                "coverage": 85
             },
             {
-                "hex": "#4E4F51",
-                "coverage": 10
+                "hex": "#707176",
+                "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "profile",
             "finish": "brushed_steel",
-            "hex": "#C8C8C8"
+            "hex": "#C0C0C0"
         }
     },
     "wall": {
@@ -24,17 +24,13 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#C9B79F",
-                "coverage": 85
-            },
-            {
-                "hex": "#A99277",
-                "coverage": 15
+                "hex": "#C9AB7F",
+                "coverage": 100
             }
         ],
         "handle": {
             "detected": false,
-            "type": "unknown",
+            "type": "handleless",
             "finish": "unknown",
             "hex": null
         }
@@ -55,17 +51,13 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#C9B79F",
-                "coverage": 90
-            },
-            {
-                "hex": "#B9A58A",
-                "coverage": 10
+                "hex": "#C9AB7F",
+                "coverage": 100
             }
         ],
         "handle": {
             "detected": false,
-            "type": "unknown",
+            "type": "handleless",
             "finish": "unknown",
             "hex": null
         }
@@ -75,7 +67,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D6D2CF",
+                "hex": "#D8D8D6",
                 "coverage": 100
             }
         ]
@@ -85,7 +77,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D0CCC7",
+                "hex": "#E6E0D6",
                 "coverage": 100
             }
         ]

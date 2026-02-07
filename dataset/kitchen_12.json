@@ -4,19 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#93B3D2",
-                "coverage": 65
+                "hex": "#A9C2D9",
+                "coverage": 70
             },
             {
-                "hex": "#4B4F55",
-                "coverage": 35
+                "hex": "#4B4D53",
+                "coverage": 30
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#B9BDC2"
+            "hex": "#B7BCC2"
         }
     },
     "wall": {
@@ -24,39 +24,30 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#93B3D2",
-                "coverage": 70
+                "hex": "#A9C2D9",
+                "coverage": 60
             },
             {
-                "hex": "#5A6067",
-                "coverage": 30
+                "hex": "#6A6D72",
+                "coverage": 40
             }
         ],
         "handle": {
             "detected": false,
-            "type": "unknown",
+            "type": "handleless",
             "finish": "unknown",
             "hex": null
         }
     },
     "tall": {
-        "detected": true,
-        "finishFamily": "Acrylic",
-        "colors": [
-            {
-                "hex": "#F3F5F6",
-                "coverage": 90
-            },
-            {
-                "hex": "#111214",
-                "coverage": 10
-            }
-        ],
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
         "handle": {
-            "detected": true,
-            "type": "bar",
-            "finish": "black",
-            "hex": "#111214"
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
         }
     },
     "loft": {
@@ -64,37 +55,37 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#93B3D2",
-                "coverage": 80
+                "hex": "#A9C2D9",
+                "coverage": 60
             },
             {
-                "hex": "#5A6067",
-                "coverage": 20
+                "hex": "#6A6D72",
+                "coverage": 40
             }
         ],
         "handle": {
             "detected": false,
-            "type": "unknown",
+            "type": "handleless",
             "finish": "unknown",
             "hex": null
         }
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F5F6F8",
+                "hex": "#F7F7F7",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F2F3F5",
+                "hex": "#F2F4F6",
                 "coverage": 100
             }
         ]

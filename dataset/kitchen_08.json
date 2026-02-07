@@ -4,19 +4,19 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#D51A23",
-                "coverage": 88
+                "hex": "#D1141F",
+                "coverage": 95
             },
             {
-                "hex": "#A80F17",
-                "coverage": 12
+                "hex": "#8E0E16",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#B9B9B9"
+            "hex": "#BEBEBE"
         }
     },
     "wall": {
@@ -24,12 +24,8 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#D51A23",
-                "coverage": 90
-            },
-            {
-                "hex": "#A80F17",
-                "coverage": 10
+                "hex": "#D1141F",
+                "coverage": 100
             }
         ],
         "handle": {
@@ -44,19 +40,19 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#D51A23",
+                "hex": "#C7121D",
                 "coverage": 85
             },
             {
-                "hex": "#A80F17",
+                "hex": "#B9B9B9",
                 "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "matte_black",
-            "hex": "#1C1C1C"
+            "finish": "brushed_steel",
+            "hex": "#B9B9B9"
         }
     },
     "loft": {
@@ -64,12 +60,8 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#D51A23",
-                "coverage": 90
-            },
-            {
-                "hex": "#A80F17",
-                "coverage": 10
+                "hex": "#D1141F",
+                "coverage": 100
             }
         ],
         "handle": {
@@ -84,7 +76,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F2F2F2",
+                "hex": "#D9D9D9",
                 "coverage": 100
             }
         ]
@@ -94,7 +86,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D9D2C8",
+                "hex": "#E7D9CF",
                 "coverage": 100
             }
         ]

@@ -4,12 +4,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#8A6A4A",
-                "coverage": 85
+                "hex": "#8A6B4F",
+                "coverage": 75
             },
             {
-                "hex": "#6E543B",
-                "coverage": 15
+                "hex": "#5F4634",
+                "coverage": 25
             }
         ],
         "handle": {
@@ -24,17 +24,17 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#8B6B4B",
+                "hex": "#8A6B4F",
                 "coverage": 80
             },
             {
-                "hex": "#6D533B",
+                "hex": "#5F4634",
                 "coverage": 20
             }
         ],
         "handle": {
             "detected": false,
-            "type": "handleless",
+            "type": "unknown",
             "finish": "unknown",
             "hex": null
         }
@@ -55,37 +55,37 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#8B6B4B",
+                "hex": "#8A6B4F",
                 "coverage": 80
             },
             {
-                "hex": "#6D533B",
+                "hex": "#5F4634",
                 "coverage": 20
             }
         ],
         "handle": {
             "detected": false,
-            "type": "handleless",
+            "type": "unknown",
             "finish": "unknown",
             "hex": null
         }
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D9D6D1",
+                "hex": "#EDEBE6",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F2F0EC",
+                "hex": "#F5F3EE",
                 "coverage": 100
             }
         ]
@@ -93,8 +93,8 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 2,
-        "layout": "linear",
-        "colorTemperature": "warm_white"
+        "count": 4,
+        "layout": "grid",
+        "colorTemperature": "neutral_white"
     }
 }

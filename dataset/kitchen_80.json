@@ -4,12 +4,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#3A3A3D",
-                "coverage": 85
+                "hex": "#2E2F33",
+                "coverage": 90
             },
             {
-                "hex": "#1F1F22",
-                "coverage": 15
+                "hex": "#1F2024",
+                "coverage": 10
             }
         ],
         "handle": {
@@ -24,12 +24,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#B7B0A6",
-                "coverage": 90
+                "hex": "#C8C1B8",
+                "coverage": 85
             },
             {
-                "hex": "#2B2B2E",
-                "coverage": 10
+                "hex": "#B6AFA7",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -44,16 +44,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#2F2F33",
-                "coverage": 70
+                "hex": "#232428",
+                "coverage": 95
             },
             {
-                "hex": "#1F1F22",
-                "coverage": 20
-            },
-            {
-                "hex": "#C8B59C",
-                "coverage": 10
+                "hex": "#3A3B40",
+                "coverage": 5
             }
         ],
         "handle": {
@@ -68,12 +64,8 @@
         "finishFamily": "Glass",
         "colors": [
             {
-                "hex": "#232326",
-                "coverage": 55
-            },
-            {
-                "hex": "#C9B9A2",
-                "coverage": 45
+                "hex": "#1C1D21",
+                "coverage": 100
             }
         ],
         "handle": {
@@ -88,7 +80,7 @@
         "finishFamily": "Stone",
         "colors": [
             {
-                "hex": "#E7E3DE",
+                "hex": "#E7E3DC",
                 "coverage": 100
             }
         ]
@@ -98,7 +90,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F2F1EF",
+                "hex": "#F2F2F2",
                 "coverage": 100
             }
         ]
@@ -106,7 +98,7 @@
     "ceilingLighting": {
         "detected": true,
         "type": "track_lights",
-        "count": 3,
+        "count": 2,
         "layout": "linear",
         "colorTemperature": "warm_white"
     }

@@ -4,19 +4,23 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#92727A",
-                "coverage": 90
+                "hex": "#9A7680",
+                "coverage": 85
             },
             {
-                "hex": "#5B434A",
+                "hex": "#2F2F33",
                 "coverage": 10
+            },
+            {
+                "hex": "#D9D7DB",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "matte_black",
-            "hex": "#1A1A1A"
+            "finish": "black",
+            "hex": "#2F2F33"
         }
     },
     "wall": {
@@ -24,19 +28,23 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#8A6A73",
-                "coverage": 80
+                "hex": "#9A7680",
+                "coverage": 75
             },
             {
-                "hex": "#4E3A41",
-                "coverage": 20
+                "hex": "#3B3D41",
+                "coverage": 15
+            },
+            {
+                "hex": "#C7C9CE",
+                "coverage": 10
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "matte_black",
-            "hex": "#1A1A1A"
+            "finish": "black",
+            "hex": "#2F2F33"
         }
     },
     "tall": {
@@ -44,17 +52,17 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#92727A",
+                "hex": "#9A7680",
                 "coverage": 95
             },
             {
-                "hex": "#5B434A",
+                "hex": "#D9D7DB",
                 "coverage": 5
             }
         ],
         "handle": {
             "detected": false,
-            "type": "handleless",
+            "type": "unknown",
             "finish": "unknown",
             "hex": null
         }
@@ -64,19 +72,23 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#8A6A73",
-                "coverage": 80
+                "hex": "#9A7680",
+                "coverage": 85
             },
             {
-                "hex": "#4E3A41",
-                "coverage": 20
+                "hex": "#2F2F33",
+                "coverage": 10
+            },
+            {
+                "hex": "#D9D7DB",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "matte_black",
-            "hex": "#1A1A1A"
+            "finish": "black",
+            "hex": "#2F2F33"
         }
     },
     "dado": {
@@ -84,7 +96,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D6D6D6",
+                "hex": "#6A6A6D",
                 "coverage": 100
             }
         ]
@@ -94,7 +106,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E6E1D7",
+                "hex": "#E7E1D6",
                 "coverage": 100
             }
         ]
@@ -102,8 +114,8 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 3,
-        "layout": "linear",
+        "count": 4,
+        "layout": "grid",
         "colorTemperature": "neutral_white"
     }
 }

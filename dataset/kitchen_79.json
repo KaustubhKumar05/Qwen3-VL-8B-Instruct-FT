@@ -4,15 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#8FBFB7",
-                "coverage": 100
+                "hex": "#7FB9B0",
+                "coverage": 90
+            },
+            {
+                "hex": "#C6A46A",
+                "coverage": 10
             }
         ],
         "handle": {
             "detected": true,
             "type": "profile",
             "finish": "gold",
-            "hex": "#B79B6A"
+            "hex": "#C6A46A"
         }
     },
     "wall": {
@@ -20,15 +24,23 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#8FBFB7",
-                "coverage": 100
+                "hex": "#80B8AF",
+                "coverage": 75
+            },
+            {
+                "hex": "#111214",
+                "coverage": 20
+            },
+            {
+                "hex": "#C6A46A",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "profile",
             "finish": "gold",
-            "hex": "#B79B6A"
+            "hex": "#C6A46A"
         }
     },
     "tall": {
@@ -43,14 +55,9 @@
         }
     },
     "loft": {
-        "detected": true,
-        "finishFamily": "Laminate",
-        "colors": [
-            {
-                "hex": "#8FBFB7",
-                "coverage": 100
-            }
-        ],
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
         "handle": {
             "detected": false,
             "type": "unknown",
@@ -60,20 +67,20 @@
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Ceramic Tile",
         "colors": [
             {
-                "hex": "#D0CFCC",
+                "hex": "#B8BDC3",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Stone/Tile",
         "colors": [
             {
-                "hex": "#6D6B56",
+                "hex": "#6C6F64",
                 "coverage": 100
             }
         ]

@@ -4,12 +4,12 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#7A1E2E",
-                "coverage": 95
+                "hex": "#7A1F3A",
+                "coverage": 85
             },
             {
-                "hex": "#B9B9B9",
-                "coverage": 5
+                "hex": "#A33B5C",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -24,12 +24,12 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#7A1E2E",
-                "coverage": 98
+                "hex": "#7A1F3A",
+                "coverage": 88
             },
             {
-                "hex": "#B9B9B9",
-                "coverage": 2
+                "hex": "#A33B5C",
+                "coverage": 12
             }
         ],
         "handle": {
@@ -40,23 +40,14 @@
         }
     },
     "tall": {
-        "detected": true,
-        "finishFamily": "Acrylic",
-        "colors": [
-            {
-                "hex": "#7A1E2E",
-                "coverage": 65
-            },
-            {
-                "hex": "#F2F2F2",
-                "coverage": 35
-            }
-        ],
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
         "handle": {
-            "detected": true,
-            "type": "bar",
-            "finish": "chrome",
-            "hex": "#C0C0C0"
+            "detected": false,
+            "type": "unknown",
+            "finish": "unknown",
+            "hex": null
         }
     },
     "loft": {
@@ -64,12 +55,12 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#7A1E2E",
-                "coverage": 98
+                "hex": "#7A1F3A",
+                "coverage": 90
             },
             {
-                "hex": "#B9B9B9",
-                "coverage": 2
+                "hex": "#A33B5C",
+                "coverage": 10
             }
         ],
         "handle": {
@@ -81,20 +72,20 @@
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Tile",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#A10F23",
+                "hex": "#B01B2C",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Tile",
+        "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#D9D2C8",
+                "hex": "#D9D0C5",
                 "coverage": 100
             }
         ]

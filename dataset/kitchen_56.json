@@ -4,15 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#B59AAA",
-                "coverage": 100
+                "hex": "#B391A6",
+                "coverage": 94
+            },
+            {
+                "hex": "#1C1C1C",
+                "coverage": 6
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "matte_black",
-            "hex": "#1A1A1A"
+            "finish": "black",
+            "hex": "#1C1C1C"
         }
     },
     "wall": {
@@ -20,15 +24,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#B79DAC",
-                "coverage": 100
+                "hex": "#B391A6",
+                "coverage": 98
+            },
+            {
+                "hex": "#F2F2F2",
+                "coverage": 2
             }
         ],
         "handle": {
-            "detected": false,
-            "type": "handleless",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "bar",
+            "finish": "white",
+            "hex": "#F2F2F2"
         }
     },
     "tall": {
@@ -58,7 +66,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F2F2F0",
+                "hex": "#D8D8D8",
                 "coverage": 100
             }
         ]
@@ -68,14 +76,14 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E7E3DA",
+                "hex": "#F1F0EC",
                 "coverage": 100
             }
         ]
     },
     "ceilingLighting": {
         "detected": true,
-        "type": "panel",
+        "type": "recessed_downlights",
         "count": 1,
         "layout": "single",
         "colorTemperature": "neutral_white"

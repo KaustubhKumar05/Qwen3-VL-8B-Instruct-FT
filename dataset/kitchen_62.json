@@ -1,62 +1,62 @@
 {
     "base": {
         "detected": true,
-        "finishFamily": "Acrylic",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F1F1EE",
-                "coverage": 85
+                "hex": "#F2F1EE",
+                "coverage": 90
             },
             {
-                "hex": "#D9D9D6",
-                "coverage": 15
+                "hex": "#CFCFCD",
+                "coverage": 10
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "chrome",
-            "hex": "#C0C0C0"
+            "hex": "#C9CDD2"
         }
     },
     "wall": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Veneer",
         "colors": [
             {
-                "hex": "#8B5A3C",
-                "coverage": 70
+                "hex": "#8B5434",
+                "coverage": 80
             },
             {
-                "hex": "#5A3A28",
-                "coverage": 30
+                "hex": "#EDEDED",
+                "coverage": 20
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "chrome",
-            "hex": "#C0C0C0"
+            "hex": "#C9CDD2"
         }
     },
     "tall": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Veneer",
         "colors": [
             {
-                "hex": "#7A4E33",
-                "coverage": 75
+                "hex": "#8B5434",
+                "coverage": 95
             },
             {
-                "hex": "#4E2F20",
-                "coverage": 25
+                "hex": "#6F3F28",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "chrome",
-            "hex": "#C0C0C0"
+            "hex": "#C9CDD2"
         }
     },
     "loft": {
@@ -72,10 +72,10 @@
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Paint",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E6E6E3",
+                "hex": "#C9CDCF",
                 "coverage": 100
             }
         ]
@@ -85,7 +85,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D7D0C3",
+                "hex": "#E7E1D6",
                 "coverage": 100
             }
         ]

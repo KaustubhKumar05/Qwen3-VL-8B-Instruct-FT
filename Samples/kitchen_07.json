@@ -4,18 +4,18 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#1B1B1B",
+                "hex": "#1F1F23",
                 "coverage": 90
             },
             {
-                "hex": "#2A1F1A",
+                "hex": "#2C2C30",
                 "coverage": 10
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "chrome",
+            "finish": "brushed_steel",
             "hex": "#C0C0C0"
         }
     },
@@ -24,19 +24,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#8E8F93",
+                "hex": "#B9B9B7",
                 "coverage": 85
             },
             {
-                "hex": "#6F7176",
+                "hex": "#A7A7A5",
                 "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "chrome",
-            "hex": "#BDBDBD"
+            "finish": "brushed_steel",
+            "hex": "#C0C0C0"
         }
     },
     "tall": {
@@ -55,8 +55,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#8E8F93",
-                "coverage": 100
+                "hex": "#6E6E72",
+                "coverage": 60
+            },
+            {
+                "hex": "#B9B9B7",
+                "coverage": 40
             }
         ],
         "handle": {
@@ -71,7 +75,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D9C6A6",
+                "hex": "#D5C19A",
                 "coverage": 100
             }
         ]
@@ -81,7 +85,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#CDB58E",
+                "hex": "#CBB58F",
                 "coverage": 100
             }
         ]
@@ -91,6 +95,6 @@
         "type": "pendant",
         "count": 1,
         "layout": "single",
-        "colorTemperature": "unknown"
+        "colorTemperature": "warm_white"
     }
 }

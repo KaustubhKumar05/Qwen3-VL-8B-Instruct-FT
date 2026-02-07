@@ -4,17 +4,17 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#C9AD8D",
-                "coverage": 70
+                "hex": "#C8A37B",
+                "coverage": 75
             },
             {
-                "hex": "#B69777",
-                "coverage": 30
+                "hex": "#B48B62",
+                "coverage": 25
             }
         ],
         "handle": {
             "detected": false,
-            "type": "gola",
+            "type": "handleless",
             "finish": "unknown",
             "hex": null
         }
@@ -24,12 +24,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F1F1F2",
-                "coverage": 82
+                "hex": "#F2F2F2",
+                "coverage": 85
             },
             {
-                "hex": "#1B1C1F",
-                "coverage": 18
+                "hex": "#1A1A1A",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -55,11 +55,11 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F2F2F3",
+                "hex": "#F2F2F2",
                 "coverage": 95
             },
             {
-                "hex": "#D6D6D8",
+                "hex": "#D9D9D9",
                 "coverage": 5
             }
         ],
@@ -72,20 +72,20 @@
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D8CFBF",
+                "hex": "#D8D1C3",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E7E2DC",
+                "hex": "#E7E2DA",
                 "coverage": 100
             }
         ]

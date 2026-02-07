@@ -4,43 +4,39 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#8FB7B0",
-                "coverage": 85
+                "hex": "#8FB9B2",
+                "coverage": 90
             },
             {
-                "hex": "#7FA8A2",
+                "hex": "#CFE1DC",
                 "coverage": 10
-            },
-            {
-                "hex": "#6E6E6E",
-                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
-            "type": "edge_profile",
-            "finish": "brushed_steel",
-            "hex": "#B8B8B8"
+            "type": "bar",
+            "finish": "gold",
+            "hex": "#C9A24A"
         }
     },
     "wall": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#F2F2EE",
-                "coverage": 90
+                "hex": "#8FB9B2",
+                "coverage": 70
             },
             {
-                "hex": "#DCDCD6",
-                "coverage": 10
+                "hex": "#F3F3EF",
+                "coverage": 30
             }
         ],
         "handle": {
-            "detected": true,
-            "type": "knob",
-            "finish": "brushed_steel",
-            "hex": "#B3B3B3"
+            "detected": false,
+            "type": "handleless",
+            "finish": "unknown",
+            "hex": null
         }
     },
     "tall": {
@@ -48,12 +44,12 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#8FB7B0",
-                "coverage": 90
+                "hex": "#8FB9B2",
+                "coverage": 85
             },
             {
-                "hex": "#6F9D97",
-                "coverage": 10
+                "hex": "#2D2F33",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -68,37 +64,33 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#F2F2EE",
-                "coverage": 90
-            },
-            {
-                "hex": "#DCDCD6",
-                "coverage": 10
+                "hex": "#F3F3EF",
+                "coverage": 100
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "brushed_steel",
-            "hex": "#B3B3B3"
+            "finish": "gold",
+            "hex": "#C9A24A"
         }
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Stone",
         "colors": [
             {
-                "hex": "#E7E3DD",
+                "hex": "#EEEDE8",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E6E1D6",
+                "hex": "#E6E0D3",
                 "coverage": 100
             }
         ]

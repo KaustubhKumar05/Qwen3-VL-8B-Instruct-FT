@@ -4,19 +4,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#B6AFA6",
+                "hex": "#B7B2AC",
                 "coverage": 90
             },
             {
-                "hex": "#9E978E",
+                "hex": "#3A3A3A",
                 "coverage": 10
             }
         ],
         "handle": {
             "detected": true,
-            "type": "knob",
-            "finish": "gold",
-            "hex": "#C9A25A"
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#BFC3C6"
         }
     },
     "wall": {
@@ -24,19 +24,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#B6AFA6",
-                "coverage": 88
+                "hex": "#B7B2AC",
+                "coverage": 92
             },
             {
-                "hex": "#9E978E",
-                "coverage": 12
+                "hex": "#6F6862",
+                "coverage": 8
             }
         ],
         "handle": {
             "detected": true,
-            "type": "knob",
-            "finish": "gold",
-            "hex": "#C9A25A"
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#BFC3C6"
         }
     },
     "tall": {
@@ -55,27 +55,27 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#B6AFA6",
-                "coverage": 92
+                "hex": "#B7B2AC",
+                "coverage": 95
             },
             {
-                "hex": "#9E978E",
-                "coverage": 8
+                "hex": "#6F6862",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
-            "type": "knob",
-            "finish": "gold",
-            "hex": "#C9A25A"
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#BFC3C6"
         }
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Quartz",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F2F1EE",
+                "hex": "#F2F0EC",
                 "coverage": 100
             }
         ]
@@ -85,7 +85,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E8E1D5",
+                "hex": "#D9D4CB",
                 "coverage": 100
             }
         ]
@@ -93,8 +93,8 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 5,
-        "layout": "linear",
+        "count": 6,
+        "layout": "grid",
         "colorTemperature": "warm_white"
     }
 }

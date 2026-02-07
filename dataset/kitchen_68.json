@@ -4,7 +4,7 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#6A849A",
+                "hex": "#6F87A1",
                 "coverage": 85
             },
             {
@@ -14,8 +14,8 @@
         ],
         "handle": {
             "detected": true,
-            "type": "gola",
-            "finish": "matte_black",
+            "type": "edge_profile",
+            "finish": "black",
             "hex": "#1A1A1A"
         }
     },
@@ -24,25 +24,34 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#708CA3",
-                "coverage": 95
+                "hex": "#6F87A1",
+                "coverage": 90
             },
             {
-                "hex": "#2A2A2A",
-                "coverage": 5
+                "hex": "#1A1A1A",
+                "coverage": 10
             }
         ],
         "handle": {
             "detected": false,
-            "type": "handleless",
+            "type": "unknown",
             "finish": "unknown",
             "hex": null
         }
     },
     "tall": {
-        "detected": false,
-        "finishFamily": "Unknown",
-        "colors": [],
+        "detected": true,
+        "finishFamily": "Acrylic",
+        "colors": [
+            {
+                "hex": "#6F87A1",
+                "coverage": 95
+            },
+            {
+                "hex": "#1A1A1A",
+                "coverage": 5
+            }
+        ],
         "handle": {
             "detected": false,
             "type": "unknown",
@@ -55,37 +64,37 @@
         "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#708CA3",
+                "hex": "#6F87A1",
                 "coverage": 95
             },
             {
-                "hex": "#2A2A2A",
+                "hex": "#1A1A1A",
                 "coverage": 5
             }
         ],
         "handle": {
             "detected": false,
-            "type": "handleless",
+            "type": "unknown",
             "finish": "unknown",
             "hex": null
         }
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Stone",
         "colors": [
             {
-                "hex": "#787775",
+                "hex": "#9A9A9A",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Unknown",
+        "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#BFC7D2",
+                "hex": "#D9DBDE",
                 "coverage": 100
             }
         ]

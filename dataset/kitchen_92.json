@@ -4,15 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#2F6F67",
-                "coverage": 100
+                "hex": "#1F6F68",
+                "coverage": 90
+            },
+            {
+                "hex": "#1A1A1A",
+                "coverage": 10
             }
         ],
         "handle": {
-            "detected": false,
-            "type": "handleless",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#BFC3C6"
         }
     },
     "wall": {
@@ -24,15 +28,15 @@
                 "coverage": 85
             },
             {
-                "hex": "#CFCFD3",
+                "hex": "#CFCFCF",
                 "coverage": 15
             }
         ],
         "handle": {
-            "detected": false,
-            "type": "handleless",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#BFC3C6"
         }
     },
     "tall": {
@@ -40,15 +44,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#2F6F67",
-                "coverage": 100
+                "hex": "#1F6F68",
+                "coverage": 95
+            },
+            {
+                "hex": "#2B2B2B",
+                "coverage": 5
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#B8BCC0"
+            "hex": "#BFC3C6"
         }
     },
     "loft": {
@@ -60,15 +68,15 @@
                 "coverage": 85
             },
             {
-                "hex": "#CFCFD3",
+                "hex": "#CFCFCF",
                 "coverage": 15
             }
         ],
         "handle": {
-            "detected": false,
-            "type": "handleless",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#BFC3C6"
         }
     },
     "dado": {
@@ -76,7 +84,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#6FAFA8",
+                "hex": "#55B8B0",
                 "coverage": 100
             }
         ]
@@ -86,7 +94,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D9D2C6",
+                "hex": "#D9D2C8",
                 "coverage": 100
             }
         ]

@@ -1,19 +1,15 @@
 {
     "base": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Veneer",
         "colors": [
             {
-                "hex": "#A36A3C",
-                "coverage": 75
+                "hex": "#B07A4B",
+                "coverage": 85
             },
             {
-                "hex": "#C89A67",
-                "coverage": 20
-            },
-            {
-                "hex": "#1E1E1E",
-                "coverage": 5
+                "hex": "#2B2420",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -25,15 +21,15 @@
     },
     "wall": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Veneer",
         "colors": [
             {
-                "hex": "#A66E3F",
-                "coverage": 80
+                "hex": "#B88252",
+                "coverage": 95
             },
             {
-                "hex": "#C79A66",
-                "coverage": 20
+                "hex": "#2B2420",
+                "coverage": 5
             }
         ],
         "handle": {
@@ -45,15 +41,15 @@
     },
     "tall": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Veneer",
         "colors": [
             {
-                "hex": "#A46C3D",
-                "coverage": 85
+                "hex": "#B07A4B",
+                "coverage": 90
             },
             {
-                "hex": "#C99A67",
-                "coverage": 15
+                "hex": "#2B2420",
+                "coverage": 10
             }
         ],
         "handle": {
@@ -65,15 +61,15 @@
     },
     "loft": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Veneer",
         "colors": [
             {
-                "hex": "#A66E3F",
-                "coverage": 85
+                "hex": "#B88252",
+                "coverage": 95
             },
             {
-                "hex": "#C79A66",
-                "coverage": 15
+                "hex": "#2B2420",
+                "coverage": 5
             }
         ],
         "handle": {
@@ -85,10 +81,10 @@
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Tile",
+        "finishFamily": "Glass",
         "colors": [
             {
-                "hex": "#F2F2EE",
+                "hex": "#F3F3F3",
                 "coverage": 100
             }
         ]
@@ -98,7 +94,7 @@
         "finishFamily": "Wood",
         "colors": [
             {
-                "hex": "#8C5A33",
+                "hex": "#8C5B36",
                 "coverage": 100
             }
         ]
@@ -106,7 +102,7 @@
     "ceilingLighting": {
         "detected": true,
         "type": "spotlight",
-        "count": 5,
+        "count": 6,
         "layout": "linear",
         "colorTemperature": "warm_white"
     }

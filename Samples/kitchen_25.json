@@ -4,8 +4,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#0D6B63",
-                "coverage": 100
+                "hex": "#0F6E68",
+                "coverage": 85
+            },
+            {
+                "hex": "#0B4E4A",
+                "coverage": 15
             }
         ],
         "handle": {
@@ -20,8 +24,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#C9B28C",
-                "coverage": 100
+                "hex": "#D6B98B",
+                "coverage": 75
+            },
+            {
+                "hex": "#C7A574",
+                "coverage": 25
             }
         ],
         "handle": {
@@ -36,8 +44,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#0D6B63",
-                "coverage": 100
+                "hex": "#0F6E68",
+                "coverage": 90
+            },
+            {
+                "hex": "#0B4E4A",
+                "coverage": 10
             }
         ],
         "handle": {
@@ -52,8 +64,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#C9B28C",
-                "coverage": 100
+                "hex": "#D6B98B",
+                "coverage": 75
+            },
+            {
+                "hex": "#C7A574",
+                "coverage": 25
             }
         ],
         "handle": {
@@ -68,7 +84,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D5B6B1",
+                "hex": "#D9C1A6",
                 "coverage": 100
             }
         ]
@@ -78,15 +94,15 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E6E2D8",
+                "hex": "#E6E2DB",
                 "coverage": 100
             }
         ]
     },
     "ceilingLighting": {
         "detected": true,
-        "type": "pendant",
-        "count": 2,
+        "type": "recessed_downlights",
+        "count": 3,
         "layout": "linear",
         "colorTemperature": "warm_white"
     }

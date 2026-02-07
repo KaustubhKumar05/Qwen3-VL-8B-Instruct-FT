@@ -4,18 +4,18 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#B7A89A",
-                "coverage": 75
+                "hex": "#B8A89A",
+                "coverage": 85
             },
             {
-                "hex": "#1B1B1B",
-                "coverage": 25
+                "hex": "#1A1A1A",
+                "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "edge_profile",
-            "finish": "matte_black",
+            "finish": "black",
             "hex": "#1A1A1A"
         }
     },
@@ -24,12 +24,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#141414",
-                "coverage": 55
+                "hex": "#CFC2B6",
+                "coverage": 75
             },
             {
-                "hex": "#D6CEC3",
-                "coverage": 45
+                "hex": "#1B1B1B",
+                "coverage": 25
             }
         ],
         "handle": {
@@ -55,12 +55,12 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#D8D0C6",
-                "coverage": 90
+                "hex": "#D6CBC0",
+                "coverage": 95
             },
             {
-                "hex": "#B0A9A0",
-                "coverage": 10
+                "hex": "#1A1A1A",
+                "coverage": 5
             }
         ],
         "handle": {
@@ -75,7 +75,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#F3F1EE",
+                "hex": "#E7E2DD",
                 "coverage": 100
             }
         ]
@@ -85,16 +85,16 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#D9D9D6",
+                "hex": "#D8D6D3",
                 "coverage": 100
             }
         ]
     },
     "ceilingLighting": {
-        "detected": false,
-        "type": "unknown",
-        "count": null,
-        "layout": "unknown",
-        "colorTemperature": "unknown"
+        "detected": true,
+        "type": "panel",
+        "count": 1,
+        "layout": "single",
+        "colorTemperature": "neutral_white"
     }
 }

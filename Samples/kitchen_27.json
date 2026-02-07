@@ -4,19 +4,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#2F5E5A",
-                "coverage": 90
+                "hex": "#2F5D5F",
+                "coverage": 85
             },
             {
-                "hex": "#234C49",
-                "coverage": 10
+                "hex": "#24494B",
+                "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "gold",
-            "hex": "#C8A14A"
+            "hex": "#C8A44D"
         }
     },
     "wall": {
@@ -25,11 +25,11 @@
         "colors": [
             {
                 "hex": "#F2F2F0",
-                "coverage": 85
+                "coverage": 90
             },
             {
-                "hex": "#E6E0D8",
-                "coverage": 15
+                "hex": "#DADBDC",
+                "coverage": 10
             }
         ],
         "handle": {
@@ -44,19 +44,19 @@
         "finishFamily": "PU",
         "colors": [
             {
-                "hex": "#2F5E5A",
-                "coverage": 90
+                "hex": "#2F5D5F",
+                "coverage": 85
             },
             {
-                "hex": "#234C49",
-                "coverage": 10
+                "hex": "#24494B",
+                "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "gold",
-            "hex": "#C8A14A"
+            "hex": "#C8A44D"
         }
     },
     "loft": {
@@ -65,11 +65,11 @@
         "colors": [
             {
                 "hex": "#F2F2F0",
-                "coverage": 85
+                "coverage": 95
             },
             {
-                "hex": "#E6E0D8",
-                "coverage": 15
+                "hex": "#DADBDC",
+                "coverage": 5
             }
         ],
         "handle": {
@@ -81,20 +81,20 @@
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Stone",
+        "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#F6F6F5",
+                "hex": "#F2F2F0",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Tile",
+        "finishFamily": "Unknown",
         "colors": [
             {
-                "hex": "#D1D0CE",
+                "hex": "#BFC0C2",
                 "coverage": 100
             }
         ]

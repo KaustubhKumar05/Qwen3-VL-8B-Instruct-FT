@@ -4,19 +4,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#7A4A26",
-                "coverage": 95
+                "hex": "#7A4D33",
+                "coverage": 85
             },
             {
-                "hex": "#4A2B16",
-                "coverage": 5
+                "hex": "#5B3A27",
+                "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
-            "finish": "brushed_steel",
-            "hex": "#B8BCC0"
+            "finish": "chrome",
+            "hex": "#C8CCD0"
         }
     },
     "wall": {
@@ -24,19 +24,19 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#5E6F1F",
+                "hex": "#6B7A2B",
                 "coverage": 90
             },
             {
-                "hex": "#8B5A2B",
+                "hex": "#4F5B1F",
                 "coverage": 10
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "unknown",
-            "hex": "#8B5A2B"
+            "finish": "bronze",
+            "hex": "#6A4A2C"
         }
     },
     "tall": {
@@ -44,25 +44,30 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#5E6F1F",
+                "hex": "#6B7A2B",
                 "coverage": 90
             },
             {
-                "hex": "#8B5A2B",
+                "hex": "#4F5B1F",
                 "coverage": 10
             }
         ],
         "handle": {
             "detected": true,
             "type": "knob",
-            "finish": "unknown",
-            "hex": "#8B5A2B"
+            "finish": "bronze",
+            "hex": "#6A4A2C"
         }
     },
     "loft": {
-        "detected": false,
-        "finishFamily": "Unknown",
-        "colors": [],
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#4A2F22",
+                "coverage": 100
+            }
+        ],
         "handle": {
             "detected": false,
             "type": "unknown",
@@ -75,7 +80,7 @@
         "finishFamily": "Paint",
         "colors": [
             {
-                "hex": "#C9773A",
+                "hex": "#D07A3D",
                 "coverage": 100
             }
         ]
@@ -85,7 +90,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E8D9C4",
+                "hex": "#D9CBAF",
                 "coverage": 100
             }
         ]
@@ -93,7 +98,7 @@
     "ceilingLighting": {
         "detected": true,
         "type": "panel",
-        "count": 2,
+        "count": 3,
         "layout": "linear",
         "colorTemperature": "neutral_white"
     }

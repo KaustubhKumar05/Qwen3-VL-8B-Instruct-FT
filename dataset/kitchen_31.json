@@ -1,19 +1,15 @@
 {
     "base": {
         "detected": true,
-        "finishFamily": "PU",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#9A5A5E",
-                "coverage": 70
+                "hex": "#8E4A50",
+                "coverage": 95
             },
             {
-                "hex": "#7F3F44",
-                "coverage": 20
-            },
-            {
-                "hex": "#B06D6F",
-                "coverage": 10
+                "hex": "#F1E7DD",
+                "coverage": 5
             }
         ],
         "handle": {
@@ -25,19 +21,15 @@
     },
     "wall": {
         "detected": true,
-        "finishFamily": "PU",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#9A5A5E",
-                "coverage": 75
+                "hex": "#8E4A50",
+                "coverage": 80
             },
             {
-                "hex": "#7F3F44",
-                "coverage": 15
-            },
-            {
-                "hex": "#B06D6F",
-                "coverage": 10
+                "hex": "#8A5A3B",
+                "coverage": 20
             }
         ],
         "handle": {
@@ -48,56 +40,46 @@
         }
     },
     "tall": {
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": []
+    },
+    "loft": {
         "detected": true,
-        "finishFamily": "Veneer",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#7B5A45",
-                "coverage": 60
+                "hex": "#8E4A50",
+                "coverage": 85
             },
             {
-                "hex": "#5E4333",
-                "coverage": 25
-            },
-            {
-                "hex": "#9A7A5F",
+                "hex": "#8A5A3B",
                 "coverage": 15
             }
         ],
         "handle": {
-            "detected": false,
-            "type": "handleless",
-            "finish": "unknown",
-            "hex": null
-        }
-    },
-    "loft": {
-        "detected": false,
-        "finishFamily": "Unknown",
-        "colors": [],
-        "handle": {
-            "detected": false,
-            "type": "unknown",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#C0C0C0"
         }
     },
     "dado": {
         "detected": true,
-        "finishFamily": "Tile",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#D9D1C7",
+                "hex": "#E8D7CF",
                 "coverage": 100
             }
         ]
     },
     "floor": {
         "detected": true,
-        "finishFamily": "Wood",
+        "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#E8E1D7",
+                "hex": "#E9E1D7",
                 "coverage": 100
             }
         ]
@@ -105,8 +87,8 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 2,
-        "layout": "linear",
+        "count": 4,
+        "layout": "perimeter",
         "colorTemperature": "warm_white"
     }
 }

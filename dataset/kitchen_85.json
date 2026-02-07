@@ -4,31 +4,11 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#4A342B",
-                "coverage": 85
-            },
-            {
-                "hex": "#6B4B3A",
-                "coverage": 15
-            }
-        ],
-        "handle": {
-            "detected": true,
-            "type": "bar",
-            "finish": "brushed_steel",
-            "hex": "#B6B6B6"
-        }
-    },
-    "wall": {
-        "detected": true,
-        "finishFamily": "Laminate",
-        "colors": [
-            {
-                "hex": "#D8D2C4",
+                "hex": "#5B3A2E",
                 "coverage": 80
             },
             {
-                "hex": "#C9C1B0",
+                "hex": "#7A5644",
                 "coverage": 20
             }
         ],
@@ -36,7 +16,27 @@
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#B6B6B6"
+            "hex": "#BFC2C4"
+        }
+    },
+    "wall": {
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#D6D0C2",
+                "coverage": 75
+            },
+            {
+                "hex": "#C1B7A7",
+                "coverage": 25
+            }
+        ],
+        "handle": {
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#BFC2C4"
         }
     },
     "tall": {
@@ -44,30 +44,39 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#4A342B",
-                "coverage": 90
+                "hex": "#5B3A2E",
+                "coverage": 85
             },
             {
-                "hex": "#6B4B3A",
-                "coverage": 10
+                "hex": "#7A5644",
+                "coverage": 15
             }
         ],
         "handle": {
             "detected": true,
             "type": "bar",
             "finish": "brushed_steel",
-            "hex": "#B6B6B6"
+            "hex": "#BFC2C4"
         }
     },
     "loft": {
-        "detected": false,
-        "finishFamily": "Unknown",
-        "colors": [],
+        "detected": true,
+        "finishFamily": "Laminate",
+        "colors": [
+            {
+                "hex": "#D6D0C2",
+                "coverage": 75
+            },
+            {
+                "hex": "#C1B7A7",
+                "coverage": 25
+            }
+        ],
         "handle": {
-            "detected": false,
-            "type": "unknown",
-            "finish": "unknown",
-            "hex": null
+            "detected": true,
+            "type": "bar",
+            "finish": "brushed_steel",
+            "hex": "#BFC2C4"
         }
     },
     "dado": {
@@ -85,7 +94,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#EDE7DC",
+                "hex": "#E8E3D7",
                 "coverage": 100
             }
         ]

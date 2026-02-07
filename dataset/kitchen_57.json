@@ -4,36 +4,32 @@
         "finishFamily": "Laminate",
         "colors": [
             {
-                "hex": "#4E7786",
+                "hex": "#4E7282",
                 "coverage": 90
             },
             {
-                "hex": "#2F3B40",
+                "hex": "#1A1A1A",
                 "coverage": 10
             }
         ],
         "handle": {
             "detected": true,
-            "type": "profile",
-            "finish": "gunmetal",
-            "hex": "#3A3F44"
+            "type": "edge_profile",
+            "finish": "black",
+            "hex": "#1A1A1A"
         }
     },
     "wall": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Acrylic",
         "colors": [
             {
                 "hex": "#F2F2F2",
                 "coverage": 70
             },
             {
-                "hex": "#1C1C1C",
-                "coverage": 20
-            },
-            {
-                "hex": "#8A5A3C",
-                "coverage": 10
+                "hex": "#2B2B2B",
+                "coverage": 30
             }
         ],
         "handle": {
@@ -44,31 +40,22 @@
         }
     },
     "tall": {
-        "detected": true,
-        "finishFamily": "Laminate",
-        "colors": [
-            {
-                "hex": "#3F6F7F",
-                "coverage": 95
-            },
-            {
-                "hex": "#2F3B40",
-                "coverage": 5
-            }
-        ],
+        "detected": false,
+        "finishFamily": "Unknown",
+        "colors": [],
         "handle": {
             "detected": false,
-            "type": "handleless",
+            "type": "unknown",
             "finish": "unknown",
             "hex": null
         }
     },
     "loft": {
         "detected": true,
-        "finishFamily": "Laminate",
+        "finishFamily": "Acrylic",
         "colors": [
             {
-                "hex": "#F3F3F3",
+                "hex": "#F2F2F2",
                 "coverage": 95
             },
             {
@@ -88,7 +75,7 @@
         "finishFamily": "Stone",
         "colors": [
             {
-                "hex": "#E7E7E7",
+                "hex": "#E6E6E6",
                 "coverage": 100
             }
         ]
@@ -98,7 +85,7 @@
         "finishFamily": "Tile",
         "colors": [
             {
-                "hex": "#E3E3E1",
+                "hex": "#D9D9D9",
                 "coverage": 100
             }
         ]
@@ -106,7 +93,7 @@
     "ceilingLighting": {
         "detected": true,
         "type": "recessed_downlights",
-        "count": 3,
+        "count": 2,
         "layout": "linear",
         "colorTemperature": "neutral_white"
     }
