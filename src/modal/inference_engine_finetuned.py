@@ -5,12 +5,12 @@ import aiohttp
 
 import modal
 
-MODEL_NAME = "kozonhf/room-analysis-qwen3-vl-8b"
+MODEL_NAME = "kozonhf/room-analysis-qwen3-vl-8b-10e"
 
-GPU = "A10G"
+GPU = "L40S"
 
 # To be reduced
-MAX_SEQ_LEN = "12288"
+MAX_SEQ_LEN = "6144"
 
 FAST_BOOT = True
 

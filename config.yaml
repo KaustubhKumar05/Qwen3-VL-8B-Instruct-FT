@@ -2,15 +2,15 @@
 
 # List of models to test (OpenRouter models or Modal)
 models_to_test:
-  # - modal-hosted/room-analysis-qwen3-vl-8b
+  - modal-hosted/room-analysis-qwen3-vl-8b-10e
   - qwen/qwen3-vl-8b-instruct
-  - openai/gpt-4.1-mini
-  - openai/gpt-5.2
+  # - openai/gpt-4.1-mini
+  # - openai/gpt-5.2
 
 # Model to use for generating ground truth (when regenerating ground truth files)
 benchmark_model: openai/gpt-5.2
 
-max_concurrent_requests: 5
+max_concurrent_requests: 2
 
 # Modal vLLM configuration
 modal:

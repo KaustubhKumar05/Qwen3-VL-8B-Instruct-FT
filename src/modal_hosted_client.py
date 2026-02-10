@@ -7,8 +7,6 @@ from pathlib import Path
 import httpx
 from openai import APIConnectionError, APITimeoutError, OpenAI
 
-from src.utils import encode_image_b64
-
 from src.modal.inference_engine_container import (
     MODEL_NAME as BASE_MODEL_NAME,
 )
@@ -21,10 +19,11 @@ from src.modal.inference_engine_finetuned import (
 from src.modal.inference_engine_finetuned import (
     PUBLIC_ENDPOINT as FINETUNED_ENDPOINT,
 )
+from src.utils import encode_image_b64
 
 MODAL_MODELS = {
     "modal-hosted/qwen3-vl-8b-fp8": (BASE_MODEL_NAME, BASE_ENDPOINT),
-    "modal-hosted/room-analysis-qwen3-vl-8b": (FINETUNED_MODEL_NAME, FINETUNED_ENDPOINT),
+    "modal-hosted/room-analysis-qwen3-vl-8b-10e": (FINETUNED_MODEL_NAME, FINETUNED_ENDPOINT),
 }
 
 
@@ -92,7 +91,7 @@ class ModalHostedClient:
                             ],
                         },
                     ],
-                    max_tokens=4000,
+                    max_tokens=3000,
                     temperature=0.0,
                 )
                 return {
