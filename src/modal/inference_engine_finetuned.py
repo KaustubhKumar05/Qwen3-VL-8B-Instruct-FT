@@ -7,12 +7,12 @@ import modal
 
 MODEL_NAME = "kozonhf/room-analysis-qwen3-vl-8b-10e"
 
-GPU = "L40S"
+GPU = "H100"
 
 # To be reduced
 MAX_SEQ_LEN = "6144"
 
-FAST_BOOT = True
+FAST_BOOT = False
 
 PUBLIC_ENDPOINT = "https://kaustubhkumar05--inference-engine-finetuned-serve.modal.run"
 
@@ -64,10 +64,6 @@ def serve():
         "--port",
         str(PORT),
         "--max-num-seqs",
-        "2",
-        "--block-size",
-        "32",
-        "--swap-space",
         "2",
     ]
 

@@ -1,0 +1,9 @@
+{
+    "base": "Laminate",
+    "wall": "Laminate",
+    "tall": "Laminate",
+    "loft": "Laminate",
+    "dado": "Laminate",
+    "floor": "Tile",
+    "ceilingLighting": "Recessed_downlights"
+}
