@@ -1,0 +1,286 @@
+{
+  "sample": "kitchen_23",
+  "model": "qwen/qwen3-vl-235b-a22b-instruct",
+  "response": {
+    "base": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#F0F7D4",
+          "coverage": 70
+        },
+        {
+          "hex": "#E6C26A",
+          "coverage": 30
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "bar",
+        "finish": "chrome",
+        "hex": "#444444"
+      }
+    },
+    "wall": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#F0F7D4",
+          "coverage": 70
+        },
+        {
+          "hex": "#E6C26A",
+          "coverage": 30
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "bar",
+        "finish": "chrome",
+        "hex": "#444444"
+      }
+    },
+    "tall": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#E6C26A",
+          "coverage": 100
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "bar",
+        "finish": "chrome",
+        "hex": "#444444"
+      }
+    },
+    "loft": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#F0F7D4",
+          "coverage": 70
+        },
+        {
+          "hex": "#E6C26A",
+          "coverage": 30
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "bar",
+        "finish": "chrome",
+        "hex": "#444444"
+      }
+    },
+    "dado": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#F5F5F5",
+          "coverage": 100
+        }
+      ]
+    },
+    "floor": {
+      "detected": true,
+      "finishFamily": "Laminate",
+      "colors": [
+        {
+          "hex": "#F8F8F8",
+          "coverage": 100
+        }
+      ]
+    },
+    "ceilingLighting": {
+      "detected": true,
+      "type": "pendant",
+      "count": 3,
+      "layout": "linear",
+      "colorTemperature": "warm_white"
+    }
+  },
+  "ground_truth": {
+    "base": {
+      "detected": true,
+      "finishFamily": "Acrylic",
+      "colors": [
+        {
+          "hex": "#F2F0D6",
+          "coverage": 75
+        },
+        {
+          "hex": "#D6B15A",
+          "coverage": 25
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "bar",
+        "finish": "brushed_steel",
+        "hex": "#B7B7B7"
+      }
+    },
+    "wall": {
+      "detected": true,
+      "finishFamily": "Acrylic",
+      "colors": [
+        {
+          "hex": "#F2F0D6",
+          "coverage": 80
+        },
+        {
+          "hex": "#D6B15A",
+          "coverage": 20
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "bar",
+        "finish": "brushed_steel",
+        "hex": "#B7B7B7"
+      }
+    },
+    "tall": {
+      "detected": true,
+      "finishFamily": "Acrylic",
+      "colors": [
+        {
+          "hex": "#D6B15A",
+          "coverage": 70
+        },
+        {
+          "hex": "#F2F0D6",
+          "coverage": 30
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "bar",
+        "finish": "brushed_steel",
+        "hex": "#B7B7B7"
+      }
+    },
+    "loft": {
+      "detected": true,
+      "finishFamily": "Acrylic",
+      "colors": [
+        {
+          "hex": "#F2F0D6",
+          "coverage": 80
+        },
+        {
+          "hex": "#D6B15A",
+          "coverage": 20
+        }
+      ],
+      "handle": {
+        "detected": true,
+        "type": "bar",
+        "finish": "brushed_steel",
+        "hex": "#B7B7B7"
+      }
+    },
+    "dado": {
+      "detected": true,
+      "finishFamily": "Unknown",
+      "colors": [
+        {
+          "hex": "#C8C8C8",
+          "coverage": 100
+        }
+      ]
+    },
+    "floor": {
+      "detected": true,
+      "finishFamily": "Unknown",
+      "colors": [
+        {
+          "hex": "#F2F2EE",
+          "coverage": 100
+        }
+      ]
+    },
+    "ceilingLighting": {
+      "detected": true,
+      "type": "pendant",
+      "count": 3,
+      "layout": "linear",
+      "colorTemperature": "warm_white"
+    }
+  },
+  "score": 0.5217007640577297,
+  "detailed_scores": {
+    "overall_score": 0.5217007640577297,
+    "component_scores": {
+      "base": {
+        "detected": 1.0,
+        "finishFamily": 0.4,
+        "colors": 0.9286044020139792,
+        "handle": 0.523108360527222,
+        "total": 0.7632029927096381
+      },
+      "wall": {
+        "detected": 1.0,
+        "finishFamily": 0.4,
+        "colors": 0.9138353318905359,
+        "handle": 0.523108360527222,
+        "total": 0.7587722716726052
+      },
+      "tall": {
+        "detected": 1.0,
+        "finishFamily": 0.4,
+        "colors": 0.6702458774579454,
+        "handle": 0.523108360527222,
+        "total": 0.685695435342828
+      },
+      "loft": {
+        "detected": 1.0,
+        "finishFamily": 0.4,
+        "colors": 0.9138353318905359,
+        "handle": 0.523108360527222,
+        "total": 0.7587722716726052
+      },
+      "dado": {
+        "detected": 1.0,
+        "finishFamily": 0.0,
+        "colors": 0.7968044770650695,
+        "handle": 1.0,
+        "total": 0.7390413431195209
+      },
+      "floor": {
+        "detected": 1.0,
+        "finishFamily": 0.0,
+        "colors": 0.9854834128068126,
+        "handle": 1.0,
+        "total": 0.7956450238420438
+      },
+      "ceilingLighting": {
+        "detected": 1.0,
+        "type": 1.0,
+        "count": 1.0,
+        "layout": 1.0,
+        "colorTemperature": 1.0,
+        "total": 1.0
+      },
+      "baseUnitCoverage": {
+        "total": 1.0
+      },
+      "wallUnitCoverage": {
+        "total": 1.0
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2195,
+    "completion_tokens": 619,
+    "total_tokens": 2814
+  },
+  "cost": 0.00163705
+}

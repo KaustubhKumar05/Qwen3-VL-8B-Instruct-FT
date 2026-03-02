@@ -4,7 +4,14 @@
 models_to_test:
   - modal-hosted/room-analysis-qwen3-vl-8b-10e
   # - qwen/qwen3-vl-8b-instruct
-  - openai/gpt-4.1-mini
+  # - openai/gpt-4.1-mini
+  # - moondream
+  # - bytedance-seed/seed-1.6-flash
+  # - z-ai/glm-4.6v
+  # - mistralai/ministral-14b-2512
+  # - qwen/qwen3-vl-30b-a3b-instruct
+  # - moonshotai/kimi-k2.5
+  # - arcee-ai/spotlight
   # - openai/gpt-5.2
 
 # Model to use for generating ground truth (when regenerating ground truth files)
@@ -20,13 +27,17 @@ modal:
 ground_truth:
   replace_all: false  # If true, replace all existing. If false, only create for missing ones
 
-prompt_file_name: base
+prompt_file_name: sample
 
 # Directory containing benchmark sample images (used for prep, ground truth, and benchmarking)
 active_dir: Samples
 
 # Directory containing dataset images (for contamination check)
 dataset_dir: dataset
+
+# Moondream API configuration
+moondream:
+  timeout: 60
 
 # OpenRouter API configuration
 openrouter:

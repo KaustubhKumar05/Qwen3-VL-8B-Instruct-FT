@@ -138,6 +138,8 @@ def parse_json_response(response_text: str) -> Dict[str, Any]:
     Raises:
         json.JSONDecodeError: If JSON parsing fails
     """
+    response_text = response_text.replace("<|end_of_box|>", "")
+
     # Try direct parse first
     try:
         return json.loads(response_text)
@@ -152,6 +154,21 @@ def parse_json_response(response_text: str) -> Dict[str, Any]:
             end = response_text.find("```", start)
             response_text = response_text[start:end].strip()
 
+        try:
+            return json.loads(response_text)
+        except json.JSONDecodeError:
+            pass
+
+        # Try stripping trailing extra braces (some models emit a redundant closing })
+        stripped = response_text.rstrip()
+        while stripped.endswith("}"):
+            stripped = stripped[:-1].rstrip()
+            try:
+                return json.loads(stripped + "}")
+            except json.JSONDecodeError:
+                continue
+
+        # Nothing worked, raise with original text
         return json.loads(response_text)
 
 
@@ -514,6 +531,7 @@ class VisionLLMOrchestrator:
         """Check if a model should use the modal-hosted endpoint."""
         return model.startswith("modal-hosted/")
 
+
     def _get_modal_client(self, model: str) -> ModalHostedClient:
         """Get or create modal client for the given model."""
         if model not in self._modal_clients:
@@ -533,6 +551,8 @@ class VisionLLMOrchestrator:
         Returns:
             Dictionary with results including score, usage, and response
         """
+        model_dir = Path("results") / self.results_dir_name / model.replace("/", "_")
+        response = None
         try:
             sample_start = datetime.now()
             print(f"[DEBUG] [{model}] Starting {sample['name']}...")
@@ -565,7 +585,6 @@ class VisionLLMOrchestrator:
                 ground_truth = json.load(f)
 
             # Score and save the result
-            model_dir = Path("results") / self.results_dir_name / model.replace("/", "_")
             response_file = model_dir / f"{sample['name']}_response.json"
 
             return score_and_save_result(
@@ -580,7 +599,9 @@ class VisionLLMOrchestrator:
             )
 
         except Exception as e:
-            print(f"[DEBUG] [{model}] {sample['name']} FAILED: {e}")
+            print(f"ERROR [{model}] {sample['name']}: {str(e)}")
+            if response is not None:
+                print(f"  Raw response:\n{response['response']}")
             return {
                 "sample_name": sample["name"],
                 "score": 0.0,
