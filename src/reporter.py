@@ -57,8 +57,8 @@ class BenchmarkReporter:
         # Summary Table
         report.append("## Summary")
         report.append("")
-        report.append("| Model | Avg Score (%) | Samples | Total Cost | Avg Cost/Request | Time |")
-        report.append("|-------|---------------|---------|------------|------------------|------|")
+        report.append("| Model | Avg Score (%) | Samples | Total Cost | Avg Cost/Request | Warmup | Time |")
+        report.append("|-------|---------------|---------|------------|------------------|--------|------|")
 
         for result in benchmark_results:
             model_name = result["model"]
@@ -75,9 +75,12 @@ class BenchmarkReporter:
                 total_cost_str = "N/A"
                 avg_cost_str = "N/A"
 
+            warmup_duration = result.get("warmup_duration")
+            warmup_str = self.format_duration(warmup_duration) if warmup_duration is not None else "-"
+
             report.append(
                 f"| {model_name} | {avg_score:.1f}% | {num_samples} | "
-                f"{total_cost_str} | {avg_cost_str} | {self.format_duration(model_duration)} |"
+                f"{total_cost_str} | {avg_cost_str} | {warmup_str} | {self.format_duration(model_duration)} |"
             )
 
         report.append("")

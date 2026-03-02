@@ -506,6 +506,10 @@ class VisionLLMOrchestrator:
         # Get models to test
         self.models = self.config.get("models_to_test", [])
 
+        print(f"[DEBUG] Models: {self.models}")
+        print(f"[DEBUG] Prompt file: {self.config.get('prompt_file_name', 'base')}")
+        print(f"[DEBUG] Max concurrent requests: {self.config.get('max_concurrent_requests', 5)}")
+
     def _is_modal_model(self, model: str) -> bool:
         """Check if a model should use the modal-hosted endpoint."""
         return model.startswith("modal-hosted/")
@@ -530,6 +534,9 @@ class VisionLLMOrchestrator:
             Dictionary with results including score, usage, and response
         """
         try:
+            sample_start = datetime.now()
+            print(f"[DEBUG] [{model}] Starting {sample['name']}...")
+
             # Call the appropriate backend
             if self._is_modal_model(model):
                 modal_client = self._get_modal_client(model)
@@ -546,6 +553,9 @@ class VisionLLMOrchestrator:
                     self.system_prompt,
                     self.user_prompt,
                 )
+
+            api_elapsed = (datetime.now() - sample_start).total_seconds()
+            print(f"[DEBUG] [{model}] {sample['name']} API response in {api_elapsed:.1f}s, tokens: {response['usage']}")
 
             # Parse the JSON response
             parsed_response = parse_json_response(response["response"])
@@ -570,7 +580,7 @@ class VisionLLMOrchestrator:
             )
 
         except Exception as e:
-            print(f"ERROR: {str(e)}")
+            print(f"[DEBUG] [{model}] {sample['name']} FAILED: {e}")
             return {
                 "sample_name": sample["name"],
                 "score": 0.0,
@@ -600,10 +610,15 @@ class VisionLLMOrchestrator:
             Dictionary with aggregated results for the model
         """
         # Warmup modal-hosted endpoint before starting (only once)
+        warmup_duration = None
         if self._is_modal_model(model):
+            print(f"[DEBUG] Warming up Modal endpoint for {model}...")
+            warmup_start = datetime.now()
             modal_client = self._get_modal_client(model)
             if not modal_client.warmup():
                 raise Exception("modal-hosted endpoint failed to start")
+            warmup_duration = (datetime.now() - warmup_start).total_seconds()
+            print(f"[DEBUG] Modal endpoint ready for {model} (warmup: {warmup_duration:.1f}s)")
 
         print(f"\nTesting model: {model}")
         print("=" * 60)
@@ -667,6 +682,7 @@ class VisionLLMOrchestrator:
             "duration": duration,
             "num_successful": len(successful_results),
             "num_total": len(sample_results),
+            "warmup_duration": warmup_duration,
         }
 
     def run_benchmark(self):

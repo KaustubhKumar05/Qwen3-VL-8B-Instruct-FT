@@ -323,6 +323,20 @@ The tool will:
 
 Pricing varies by model. Check current rates at [https://openrouter.ai/models](https://openrouter.ai/models)
 
+## Modal Deployment
+
+Deploy an inference engine to Modal:
+
+```bash
+modal deploy src/modal/inference_engine_finetuned.py
+```
+
+To force a full image rebuild (e.g. after changing dependencies):
+
+```bash
+MODAL_FORCE_BUILD=1 modal deploy src/modal/inference_engine_finetuned.py
+```
+
 ## Development
 
 ### Project Dependencies
